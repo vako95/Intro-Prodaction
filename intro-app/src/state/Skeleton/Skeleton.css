@@ -1,0 +1,58 @@
+.skeleton {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 25%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 100%);
+    animation: shimmer-bg-forward 2048ms linear infinite;
+}
+
+@keyframes shimmer-bg-forward {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* 
+.skleton::before {
+    content: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 25%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer-bg-reverse 2s infinite;
+}
+
+@keyframes shimmer-bg-forward {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+} */

@@ -1,0 +1,408 @@
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.splash-screen--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-screen__background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(20, 18, 18, 1) 0%, 
+        rgba(34, 34, 34, 1) 50%, 
+        rgba(20, 18, 18, 1) 100%
+    );
+}
+
+.splash-screen__gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(170, 132, 83, 0.15) 0%,
+        transparent 70%
+    );
+    animation: pulseGradient 4s ease-in-out infinite;
+}
+
+.splash-screen__particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.splash-screen__particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(170, 132, 83, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(170, 132, 83, 0.8);
+}
+
+.splash-screen__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    z-index: 1;
+}
+
+.splash-screen__logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.splash-screen__logo-border {
+    position: relative;
+    padding: 40px 60px;
+    background: linear-gradient(135deg,
+        rgba(170, 132, 83, 0.1),
+        rgba(190, 152, 103, 0.05),
+        rgba(170, 132, 83, 0.1)
+    );
+    border: 2px solid rgba(170, 132, 83, 0.3);
+    box-shadow: 
+        0 0 40px rgba(170, 132, 83, 0.3),
+        inset 0 0 40px rgba(170, 132, 83, 0.1);
+    backdrop-filter: blur(10px);
+    animation: borderGlowPulse 3s ease-in-out infinite;
+}
+
+.splash-screen__logo-border::before,
+.splash-screen__logo-border::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(170, 132, 83, 0.8);
+}
+
+.splash-screen__logo-border::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.splash-screen__logo-border::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
+.splash-screen__logo-inner {
+    position: relative;
+}
+
+.splash-screen__logo-text {
+    font-family: "Gilda Display", serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    letter-spacing: 12px;
+    margin: 0;
+    display: flex;
+    gap: 4px;
+    text-shadow: 
+        0 0 20px rgba(170, 132, 83, 0.5),
+        0 0 40px rgba(170, 132, 83, 0.3);
+}
+
+.splash-screen__logo-letter {
+    display: inline-block;
+    animation: letterFloat 2s ease-in-out infinite;
+}
+
+.splash-screen__logo-letter:nth-child(1) { animation-delay: 0s; }
+.splash-screen__logo-letter:nth-child(2) { animation-delay: 0.1s; }
+.splash-screen__logo-letter:nth-child(3) { animation-delay: 0.2s; }
+.splash-screen__logo-letter:nth-child(4) { animation-delay: 0.3s; }
+.splash-screen__logo-letter:nth-child(5) { animation-delay: 0.4s; }
+
+.splash-screen__shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s ease-in-out infinite;
+}
+
+.splash-screen__subtitle {
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+}
+
+.splash-screen__subtitle-text {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(167, 155, 155);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+.splash-screen__loader {
+    position: relative;
+    width: 300px;
+    height: 2px;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards;
+}
+
+.splash-screen__loader-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(170, 132, 83, 0.2);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(170, 132, 83, 0.3);
+}
+
+.splash-screen__loader-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(170, 132, 83, 0.8),
+        rgba(190, 152, 103, 1),
+        rgba(170, 132, 83, 0.8)
+    );
+    background-size: 200% 100%;
+    box-shadow: 
+        0 0 20px rgba(170, 132, 83, 0.8),
+        0 0 40px rgba(170, 132, 83, 0.4);
+    transition: width 100ms linear;
+    animation: progressShimmer 1.5s ease-in-out infinite;
+}
+
+.splash-screen__loader-glow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    transform: translateY(-50%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(170, 132, 83, 0.4) 0%,
+        transparent 70%
+    );
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.splash-screen__decorative-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    pointer-events: none;
+}
+
+.splash-screen__line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(170, 132, 83, 0.3),
+        transparent
+    );
+}
+
+.splash-screen__line--left {
+    left: 0;
+    animation: lineGrow 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards;
+}
+
+.splash-screen__line--right {
+    right: 0;
+    animation: lineGrow 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.7s backwards;
+}
+
+/* Animations */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes letterFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 200%;
+    }
+}
+
+@keyframes borderGlowPulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 40px rgba(170, 132, 83, 0.3),
+            inset 0 0 40px rgba(170, 132, 83, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 60px rgba(170, 132, 83, 0.5),
+            inset 0 0 60px rgba(170, 132, 83, 0.2);
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(170, 132, 83, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(170, 132, 83, 0.6);
+    }
+}
+
+@keyframes progressShimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseGradient {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .splash-screen__logo-text {
+        font-size: 60px;
+        letter-spacing: 8px;
+    }
+
+    .splash-screen__logo-border {
+        padding: 30px 40px;
+    }
+
+    .splash-screen__subtitle-text {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .splash-screen__loader {
+        width: 250px;
+    }
+
+    .splash-screen__content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-screen__logo-text {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+
+    .splash-screen__logo-border {
+        padding: 20px 30px;
+    }
+
+    .splash-screen__subtitle-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .splash-screen__loader {
+        width: 200px;
+    }
+
+    .splash-screen__content {
+        gap: 20px;
+        padding: 20px;
+    }
+}

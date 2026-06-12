@@ -1,0 +1,158 @@
+.breadcrumbs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 0px;
+}
+
+.breadcrumbs-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.breadcrumbs__title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 62px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.breadcrumbs__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.breadcrumbs__item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+    content: "\EA6E";
+    font-family: 'remixicon';
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+    margin: 0px 8px;
+}
+
+.breadcrumbs__item-link {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    transition: color 250ms linear;
+}
+
+.breadcrumbs__item-link:hover {
+    color: rgba(170, 132, 83, 1);
+}
+
+.breadcrumbs__current {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        padding: 60px 0;
+    }
+
+    .breadcrumbs-heading {
+        margin-bottom: 28px;
+    }
+
+    .breadcrumbs__title {
+        font-size: 48px;
+    }
+
+    .breadcrumbs__item-link,
+    .breadcrumbs__current {
+        font-size: 15px;
+    }
+
+    .breadcrumbs__item:not(:last-of-type)::after {
+        font-size: 15px;
+        margin: 0 6px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .breadcrumbs {
+        padding: 48px 0;
+    }
+
+    .breadcrumbs-heading {
+        margin-bottom: 24px;
+    }
+
+    .breadcrumbs__title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .breadcrumbs__list {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .breadcrumbs__item-link,
+    .breadcrumbs__current {
+        font-size: 14px;
+    }
+
+    .breadcrumbs__item:not(:last-of-type)::after {
+        font-size: 14px;
+        margin: 0 4px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .breadcrumbs {
+        padding: 40px 0;
+    }
+
+    .breadcrumbs-heading {
+        margin-bottom: 20px;
+    }
+
+    .breadcrumbs__title {
+        font-size: 32px;
+    }
+
+    .breadcrumbs__item-link,
+    .breadcrumbs__current {
+        font-size: 13px;
+    }
+}

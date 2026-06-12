@@ -1,0 +1,644 @@
+.reservation__booking-fields {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(20, 18, 18, 0.95) 0%, rgba(34, 34, 34, 0.95) 100%);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid rgba(170, 132, 83, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base) var(--ease-in-out);
+    gap: var(--space-4);
+}
+
+.reservation__booking-fields:hover {
+    border-color: rgba(170, 132, 83, 0.4);
+    box-shadow: var(--shadow-xl);
+}
+
+.reservation__booking-fields-list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    color: var(--color-gray-400);
+    gap: 0;
+}
+
+.reservation__booking-fields-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.reservation__booking-fields-wprapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reservation__booking-fields-item {
+    position: relative;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    padding: var(--space-3) var(--space-4);
+    cursor: pointer;
+    transition: all var(--transition-fast) var(--ease-in-out);
+    border-radius: 0;
+}
+
+.reservation__booking-fields-item:hover {
+    background-color: rgba(170, 132, 83, 0.08);
+}
+
+.reservation__booking-fields-item:first-of-type {
+    border-top-left-radius: var(--radius-base);
+    border-bottom-left-radius: var(--radius-base);
+}
+
+.reservation__booking-fields-item:last-of-type {
+    border-top-right-radius: var(--radius-base);
+    border-bottom-right-radius: var(--radius-base);
+}
+
+.reservation__booking-fields-item:not(:last-of-type) {
+    border-right: 1px solid rgba(170, 132, 83, 0.15);
+}
+
+.reservation__booking-fields-item-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--space-3);
+    padding: var(--space-2);
+    background: rgba(170, 132, 83, 0.1);
+    border-radius: var(--radius-base);
+    transition: all var(--transition-fast) var(--ease-in-out);
+    flex-shrink: 0;
+}
+
+.reservation__booking-fields-item:hover .reservation__booking-fields-item-wrapper {
+    background: rgba(170, 132, 83, 0.2);
+    transform: scale(1.05);
+}
+
+.reservation__booking-fields-item-wrapper-icon {
+    display: flex;
+    font-size: 1rem;
+    color: var(--color-primary);
+    width: 1rem;
+    height: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation__booking-fields-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-1);
+    min-height: 50px;
+}
+
+.reservation__booking-fields-item-title {
+    font-family: var(--font-family-primary);
+    font-size: 0.6875rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.reservation__booking-fields-item-counts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.reservation__booking-fields-item-control {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    min-height: 20px;
+}
+
+.reservation__booking-fields-item-control-title {
+    color: var(--color-gray-300);
+    font-family: var(--font-family-primary);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-normal);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    white-space: nowrap;
+}
+
+.reservation__booking-fields-item-control-value {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 var(--space-1);
+    color: var(--color-primary);
+    font-family: var(--font-family-primary);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-semibold);
+    background: rgba(170, 132, 83, 0.15);
+    border-radius: var(--radius-sm);
+}
+
+.reservation__booking-fields-item-count {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 80px;
+    color: var(--color-gray-300);
+    font-family: var(--font-family-primary);
+    font-size: 0.8125rem;
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reservation__booking-fields-item-value {
+    display: none;
+}
+
+.reservation__booking-fields-calendar {
+    position: absolute;
+       top: calc(100% + 23px);
+    left: calc(-1 * var(--space-6));
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: var(--z-index-dropdown);
+    animation: fadeInDown var(--transition-base) var(--ease-out);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reservation__booking-fields-quantity {
+    position: absolute;
+    top: calc(100% + var(--space-6));
+    left: 0;
+    width: auto;
+    min-width: 280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: linear-gradient(135deg, rgba(20, 18, 18, 0.98) 0%, rgba(34, 34, 34, 0.98) 100%);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+    z-index: var(--z-index-dropdown);
+    padding: var(--space-4);
+    animation: fadeInDown var(--transition-base) var(--ease-out);
+}
+
+.reservation__booking-fields-quantity-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-base);
+    transition: background-color var(--transition-fast) var(--ease-in-out);
+}
+
+.reservation__booking-fields-quantity-item:hover {
+    background-color: rgba(170, 132, 83, 0.08);
+}
+
+.reservation__booking-fields-quantity-item:not(:last-of-type) {
+    margin-bottom: var(--space-1);
+}
+
+.reservation__booking-fields-quantity-inner {
+    width: 100%;
+    display: flex;
+}
+
+.reservation__booking-fields-quantity-label {
+    min-width: 100px;
+}
+
+.reservation__booking-fields-actions {
+    max-width: 180px;
+    min-width: 180px;
+    width: 180px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+.reservation__booking-fields-action-title {
+    font-family: var(--font-family-primary);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+  
+    .reservation__booking-fields {
+       
+        
+        padding: var(--space-4);
+        gap: var(--space-4);
+        border-radius: var(--radius-md);
+    }
+
+    .reservation__booking-fields-list {
+       
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        grid-auto-rows: auto;
+        gap: 0;
+        width: 100%;
+    }
+
+    .reservation__booking-fields-content {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .reservation__booking-fields-wprapper {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-4);
+        border-right: none !important;
+        border-bottom: 1px solid rgba(170, 132, 83, 0.15);
+        border-radius: 0 !important;
+        min-height: auto;
+    }
+
+    .reservation__booking-fields-item:first-of-type {
+        border-top-left-radius: var(--radius-base) !important;
+        border-top-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-item:last-of-type {
+        border-bottom: none;
+        border-bottom-left-radius: var(--radius-base) !important;
+        border-bottom-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-item-wrapper {
+        margin-right: var(--space-3);
+        padding: var(--space-2);
+    }
+
+    .reservation__booking-fields-item-wrapper-icon {
+        font-size: 1rem;
+    }
+
+    .reservation__booking-fields-item-title {
+        font-size: var(--font-size-xs);
+    }
+
+    .reservation__booking-fields-item-control {
+        gap: var(--space-2);
+    }
+
+    .reservation__booking-fields-item-control-title,
+    .reservation__booking-fields-item-control-value,
+    .reservation__booking-fields-item-count {
+        font-size: var(--font-size-xs);
+    }
+
+    .reservation__booking-fields-calendar {
+        left: 0;
+        top: calc(100% + var(--space-3));
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .reservation__booking-fields-quantity {
+        top: calc(100% + var(--space-3));
+        padding: var(--space-3);
+        min-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .reservation__booking-fields-quantity-item {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .reservation__booking-fields-quantity-label {
+        min-width: 70px;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 100%;
+        justify-content: stretch;
+    }
+
+    .reservation__booking-fields-action-title {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .reservation__booking-fields-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        margin-bottom: 16px;
+        }
+    .reservation__booking-fields {
+        flex-direction: column;
+        padding: var(--space-5);
+        gap: var(--space-5);
+    }
+
+    .reservation__booking-fields-list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 0;
+        width: 100%;
+    }
+
+    .reservation__booking-fields-content {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .reservation__booking-fields-wprapper {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-4);
+        border-right: none !important;
+        border-bottom: 1px solid rgba(170, 132, 83, 0.15);
+        border-radius: 0 !important;
+        min-height: auto;
+    }
+
+    .reservation__booking-fields-item:first-of-type {
+        border-top-left-radius: var(--radius-base) !important;
+        border-top-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-item:last-of-type {
+        border-bottom: none;
+        border-bottom-left-radius: var(--radius-base) !important;
+        border-bottom-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-item-title {
+        font-size: var(--font-size-sm);
+    }
+
+    .reservation__booking-fields-item-control-title,
+    .reservation__booking-fields-item-control-value,
+    .reservation__booking-fields-item-count {
+        font-size: var(--font-size-sm);
+    }
+
+    .reservation__booking-fields-calendar {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .reservation__booking-fields-quantity {
+        padding: var(--space-4);
+        min-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .reservation__booking-fields-quantity-item {
+        padding: var(--space-4) var(--space-5);
+    }
+
+    .reservation__booking-fields-quantity-label {
+        min-width: 80px;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 100%;
+        justify-content: stretch;
+    }
+
+    .reservation__booking-fields-action-title {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .reservation__booking-fields {
+        flex-direction: column;
+        padding: var(--space-6);
+        gap: var(--space-6);
+    }
+
+    .reservation__booking-fields-list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 0;
+        width: 100%;
+    }
+
+    .reservation__booking-fields-content {
+        flex-direction: column;
+        gap: var(--space-5);
+    }
+
+    .reservation__booking-fields-wprapper {
+        flex-direction: column;
+        gap: var(--space-5);
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-5);
+        border-right: none !important;
+        border-bottom: 1px solid rgba(170, 132, 83, 0.15);
+        border-radius: 0 !important;
+        min-height: auto;
+    }
+
+    .reservation__booking-fields-item:first-of-type {
+        border-top-left-radius: var(--radius-base) !important;
+        border-top-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-item:last-of-type {
+        border-bottom: none;
+        border-bottom-left-radius: var(--radius-base) !important;
+        border-bottom-right-radius: var(--radius-base) !important;
+    }
+
+    .reservation__booking-fields-calendar {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .reservation__booking-fields-quantity {
+        min-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 100%;
+        justify-content: stretch;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .reservation__booking-fields {
+        padding: var(--space-4);
+        gap: var(--space-3);
+    }
+
+    .reservation__booking-fields-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 0;
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-3) var(--space-4);
+        min-height: 70px;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 160px;
+        min-width: 160px;
+        width: 160px;
+    }
+
+    .reservation__booking-fields-action-title {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Large Desktops (1440px and above) */
+@media (min-width: 1440px) {
+    .reservation__booking-fields {
+        padding: var(--space-5);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-4) var(--space-6);
+        min-height: 75px;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 220px;
+        min-width: 220px;
+        width: 220px;
+    }
+
+    .reservation__booking-fields-action-title {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Medium Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .reservation__booking-fields {
+        padding: var(--space-5);
+    }
+
+    .reservation__booking-fields-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
+    }
+
+    .reservation__booking-fields-item {
+        padding: var(--space-4) var(--space-5);
+        min-height: 75px;
+    }
+
+    .reservation__booking-fields-item-count {
+        min-width: 85px;
+    }
+
+    .reservation__booking-fields-actions {
+        max-width: 200px;
+        min-width: 200px;
+        width: 200px;
+    }
+}

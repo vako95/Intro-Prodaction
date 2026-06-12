@@ -1,0 +1,100 @@
+/* .overlay__section:last-child {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.overlay__section-right {
+       width: 100%;
+    height: 100%;
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.overlay__backdrop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+
+
+.overlay__player {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 50%;
+    /* margin-top: 150px; */
+}
+
+.overlay__player-icon {
+    display: flex;
+    font-size: 32px;
+    color: rgba(238, 238, 238, 1);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+
+    .overlay__backdrop {
+        min-height: 50dvh;
+    }
+    .overlay__section-right{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+    .overlay__player-icon {
+        font-size: 24px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+ 
+
+    .overlay__player-icon {
+        font-size: 26px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+
+
+    .overlay__player-icon {
+        font-size: 28px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .overlay__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    align-items: center;
+    z-index: 1000;
+    }
+
+    .overlay__player-icon {
+        font-size: 30px;
+    }
+}

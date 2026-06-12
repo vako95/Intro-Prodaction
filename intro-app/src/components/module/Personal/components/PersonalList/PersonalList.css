@@ -1,0 +1,68 @@
+.personal__list {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+
+}
+
+.personal__list-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .personal__list {
+        gap: 12px;
+    }
+
+    .personal__list-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .personal__list {
+        gap: 14px;
+    }
+
+    .personal__list-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .personal__list {
+        gap: 14px;
+    }
+
+    .personal__list-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .personal__list {
+        gap: 15px;
+    }
+
+    .personal__list-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

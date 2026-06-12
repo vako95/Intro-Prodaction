@@ -1,0 +1,30 @@
+.quote {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 0px;
+}
+
+
+@media (max-width: 768px) {
+    .quote {
+        padding: 60px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .quote {
+        padding: 48px 0;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .quote {
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,149 @@
+.scrollbar {
+    width: 24px;
+    height: auto;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.scrollbar__arrow {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollbar__arrow-up {
+    width: 24px;
+    height: 24px;
+    background: rgba(170, 132, 83, 1);
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    clip-path: path("M0 0 H24 V24 A12 6 0 0 0 0 24 Z");
+}
+
+.scrollbar__arrow-up:hover {
+    background: rgba(170, 132, 83, 1);
+}
+
+.scrollbar__arrow-down {
+    width: 24px;
+    height: 24px;
+    background: rgba(170, 132, 83, 1);
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    clip-path: path("M0 24 H24 V0 A12 6 0 0 1 0 0 Z");
+}
+
+.scrollbar__arrow-down:hover {
+    background: rgba(170, 132, 83, 1);
+}
+
+
+
+.scrollbar__track {
+    position: relative;
+    flex: 1;
+    width: 12px;
+    margin: 16px 0;
+    background: black;
+    border-radius: 24px;
+}
+
+.scrollbar__thumb {
+    position: absolute;
+    width: 12px;
+    background: rgba(170, 132, 83, 1);
+    border-radius: 24px;
+    cursor: grab;
+    transition: background 0.2s;
+
+}
+
+.scrollbar__thumb:active {
+    cursor: grabbing;
+    background: rgba(150, 110, 60, 1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .scrollbar {
+        width: 20px;
+    }
+
+    .scrollbar__arrow-up,
+    .scrollbar__arrow-down {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    .scrollbar__track {
+        width: 10px;
+        margin: 14px 0;
+    }
+
+    .scrollbar__thumb {
+        width: 10px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .scrollbar {
+        width: 18px;
+    }
+
+    .scrollbar__arrow-up,
+    .scrollbar__arrow-down {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .scrollbar__track {
+        width: 9px;
+        margin: 12px 0;
+    }
+
+    .scrollbar__thumb {
+        width: 9px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .scrollbar {
+        width: 16px;
+    }
+
+    .scrollbar__arrow-up,
+    .scrollbar__arrow-down {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+    }
+
+    .scrollbar__track {
+        width: 8px;
+        margin: 10px 0;
+    }
+
+    .scrollbar__thumb {
+        width: 8px;
+    }
+}

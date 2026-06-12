@@ -1,0 +1,83 @@
+.footer__about-social-item {
+    width: 100%;
+    min-width: 42px;
+    min-height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(111, 111, 111);
+    border-radius: 100%;
+    padding: 8px;
+    background-color: rgb(16, 16, 16);
+    transition: background-color 250ms linear;
+    margin-right: 12px;
+
+
+}
+
+.footer__about-social-item :not(:last-of-type) {
+    margin-right: 16px;
+}
+
+.footer__about-social-item:hover {
+    background-color: #aa8453;
+}
+
+.footer__about-social-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+.footer__about-social-link-icon {
+    font-size: 16px;
+    display: flex;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .footer__about-social-item {
+        width: auto;
+        min-width: 36px;
+        min-height: 36px;
+        padding: 6px;
+        margin-right: 8px;
+    }
+
+    .footer__about-social-link-icon {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer__about-social-item {
+            width: auto;
+        min-width: 38px;
+        min-height: 38px;
+        padding: 7px;
+        margin-right: 10px;
+    }
+
+    .footer__about-social-link-icon {
+        font-size: 15px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer__about-social-item {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}

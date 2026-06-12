@@ -1,0 +1,127 @@
+.footer__subscribe-form-input-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__subscribe-form-input-checkbox:hover .subscribe__checkbox-input {
+    transform: rotateY(180deg);
+    transition: transform 0.3s linear;
+}
+
+.subscribe__checkbox-input {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(173, 173, 173);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 12px;
+    outline: none;
+    flex-shrink: 0;
+    transition: border-color 0.4s linear, color 0.3s linear, transform 0.6s;
+}
+
+.subscribe__checkbox-input::after {
+    content: "✔";
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    color: rgba(173, 173, 173);
+    transition: color 0.3ms linear, transform 0.6s linear;
+}
+
+.subscribe__checkbox-input:checked {
+    border-color: #4caf50;
+}
+
+.subscribe__checkbox-input:checked::after {
+    color: #4caf50;
+    transform: translate(-50%, -50%) rotateY(0deg);
+}
+
+.subscribe__checkbox-input:checked:hover::after {
+    color: #4caf50;
+}
+.footer__subscribe-form-label{
+    display: flex;
+}
+.subscribe__checkbox-title {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(173, 173, 173);
+    line-height: 26px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .subscribe__checkbox-input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .subscribe__checkbox-input::after {
+        font-size: 14px;
+    }
+
+    .subscribe__checkbox-title {
+        font-size: 15px;
+        line-height: 24px;
+        max-width: 350px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .subscribe__checkbox-input {
+        width: 18px;
+        height: 18px;
+        margin-right: 16px;
+    }
+    .footer__subscribe-heading {
+        margin-bottom: 24px;
+    }
+
+    .subscribe__checkbox-input::after {
+        font-size: 13px;
+    }
+
+    .subscribe__checkbox-title {
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 300px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .subscribe__checkbox-input {
+        width: 16px;
+        height: 16px;
+        margin-right: 16px;
+    }
+    .footer__subscribe-heading {
+        margin-bottom: 24px;
+    }
+    .subscribe__checkbox-input::after {
+        font-size: 12px;
+    }
+
+    .subscribe__checkbox-title {
+        font-size: 13px;
+        line-height: 20px;
+        max-width: 250px;
+    }
+}

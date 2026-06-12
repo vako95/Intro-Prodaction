@@ -1,0 +1,80 @@
+.load-line {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8e8e8;
+    overflow: hidden;
+}
+
+.load-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 15%;
+    height: 100%;
+    background: rgba(170, 132, 83, 1);
+    animation: lineColor 8s linear infinite;
+}
+
+.load-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(170, 132, 83, 1);
+    /* animation: lineColor 12s linear infinite */
+}
+
+@keyframes lineColor {
+    0% {
+        left: -25%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .load-line {
+        height: 2.5px;
+    }
+
+    .load-line::before {
+        width: 18%;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .load-line {
+        height: 2px;
+    }
+
+    .load-line::before {
+        width: 20%;
+        animation: lineColor 10s linear infinite;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .load-line {
+        height: 1.5px;
+    }
+
+    .load-line::before {
+        width: 22%;
+    }
+}

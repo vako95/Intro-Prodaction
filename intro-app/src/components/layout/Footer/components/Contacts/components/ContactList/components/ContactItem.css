@@ -1,0 +1,100 @@
+.footer__contact-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.footer__contact-item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.footer__contact-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__contact-link-icon {
+    display: flex;
+    font-size: 22px;
+    color: rgb(173, 173, 173);
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.footer__contact-title {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+    line-height: 26px;
+}
+
+.footer__contact-link i,
+.footer__contact-link .footer__contact-title {
+    transition: color 100ms linear;
+}
+
+
+.footer__contact-link:hover .footer__contact-link-icon,
+.footer__contact-link:hover .footer__contact-title {
+    color: rgba(170, 132, 83);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .footer__contact-item:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .footer__contact-link-icon {
+        font-size: 18px;
+        margin-right: 6px;
+    }
+
+    .footer__contact-title {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer__contact-link-icon {
+        font-size: 19px;
+        margin-right: 7px;
+    }
+
+    .footer__contact-title {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer__contact-link-icon {
+        font-size: 20px;
+    }
+
+    .footer__contact-title {
+        max-width: 100%;
+    }
+}

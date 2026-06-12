@@ -1,0 +1,191 @@
+.select {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    /* z-index: 9999; */
+}
+
+
+.select__field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid rgba(255, 255, 255, 0.242);
+    color: rgba(170, 132, 83, 1);
+    padding: 16px;
+}
+
+.select__field-title {
+    font-family: inherit;
+    font-weight: 400;
+    color: inherit;
+    font-size: inherit;
+    transition: color 100ms linear;
+
+}
+
+
+
+.select.select--open .select__field-icon {
+    transform-origin: center center;
+    transform: rotate(180deg);
+
+}
+
+.select__field-icon {
+    display: flex;
+    transition: color 100ms linear;
+    transition: transform 200ms ease;
+
+}
+
+.select:hover .select__field-title,
+.select:hover .select__field-icon {
+    color: rgba(170, 132, 83);
+}
+
+.select__content {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(255, 255, 255, 0.242);
+    color: rgba(255, 255, 255);
+    border-top: none;
+    padding-top: 1px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms ease, opacity 250ms ease;
+    background-color: rgba(0, 0, 0);
+    position: absolute;
+
+}
+
+
+.select--open .select__content {
+    transform: scaleY(1);
+    opacity: 1;
+
+}
+
+
+
+.select__list {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    padding: 16px;
+    overflow-y: auto;
+    scrollbar-color: rgba(170, 132, 83) rgba(0, 0, 0, 0.68);
+    gap: 8px;
+    /* z-index: 99999; */
+}
+
+/* .select__list::-webkit-scrollbar {
+    width: 8px;
+
+} */
+
+
+
+/* 
+ .select__list::-webkit-scrollbar-track {
+    background-color: rgba(200, 170, 130, 0.3);
+
+} */
+
+
+
+
+
+
+
+.select__item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: color 100ms linear, margin-left 250ms linear;
+}
+
+.select__item:hover {
+    color: rgba(170, 132, 83);
+    margin-left: 4px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .select__field {
+        padding: 14px;
+    }
+
+    .select__list {
+        padding: 14px;
+        max-height: 130px;
+    }
+
+    .select__content {
+        width: 60%;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .select {
+        font-size: 0.95rem;
+    }
+
+    .select__field {
+        padding: 12px;
+    }
+
+    .select__list {
+        padding: 12px;
+        max-height: 120px;
+        gap: 6px;
+    }
+
+    .select__content {
+        width: 70%;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .select {
+        font-size: 0.9rem;
+    }
+
+    .select__field {
+        padding: 10px;
+    }
+
+    .select__list {
+        padding: 10px;
+        max-height: 100px;
+    }
+
+    .select__content {
+        width: 80%;
+    }
+}

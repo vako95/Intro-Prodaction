@@ -1,0 +1,105 @@
+.food-card__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style-type: none;
+    gap: 38px;
+    transition: width 3s, gap 250ms linear;
+
+}
+
+.food-card__list-columns-2 .food-card__item::after {
+    width: 100%;
+}
+
+.food-card__list-columns-2 .food-card__item::before {
+    width: 50%;
+}
+
+.food-card__list-columns-1 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+.food-card__list-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.food-card__list-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.food-card__list-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.food-card__list-columns-3 .food-card-wrapper {
+    margin-right: 0px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .food-card__list {
+        gap: 32px;
+    }
+
+    .food-card__list-columns-2 {
+        gap: 18px;
+    }
+
+    .food-card__list-columns-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .food-card__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 28px;
+    }
+
+    .food-card__list-columns-1 {
+        gap: 32px;
+    }
+
+    .food-card__list-columns-2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .food-card__list-columns-3 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .food-card__list {
+        gap: 24px;
+    }
+
+    .food-card__list-columns-1 {
+        gap: 28px;
+    }
+
+    .food-card__list-columns-2 {
+        gap: 20px;
+    }
+
+    .food-card__list-columns-3 {
+        gap: 20px;
+    }
+}

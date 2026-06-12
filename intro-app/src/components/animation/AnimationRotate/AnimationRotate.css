@@ -1,0 +1,8 @@
+.animation-rotate {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

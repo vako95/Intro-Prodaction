@@ -1,0 +1,220 @@
+.frame-input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.frame-input__field {
+    display: none;
+}
+
+
+.frame-input__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame-input__title {
+    font-size: 14px;
+    font-weight: inherit;
+    color: rgba(171, 171, 171, 1);
+    white-space: nowrap;
+}
+
+.frame-input__info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 4px;
+}
+
+.frame-input__info-position--undefined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-input__info-position--start {
+    justify-content: flex-start;
+}
+
+.frame-input__subtitle {
+    font-size: 14px;
+    color: rgba(171, 171, 171, 1);
+    margin: 0px 4px;
+}
+
+
+
+.frame-input__value {
+    font-size: 14px;
+    color: rgba(171, 171, 171, 1);
+
+}
+
+.frame-input__badge {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.frame-input__badge-icon {
+    display: flex;
+    color: rgba(170, 132, 83, 1);
+    transform-origin: center center;
+}
+
+.frame-input__badge-icon--open {
+    transform: rotate(180deg);
+    color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.frame-input__time {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.frame-input__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.frame-input__heading-title {
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(171, 171, 171, 1);
+}
+
+.frame-input__date {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.frame-input__date-subtitle {
+    font-size: inherit;
+    color: rgba(171, 171, 171, 1);
+    margin-right: 4px;
+}
+
+.frame-input__date-subtitle::after {
+    content: ":";
+}
+
+.frame-input__time-value {
+    font-size: inherit;
+    color: rgba(171, 171, 171, 1);
+}
+
+
+.frame-input__date-value {
+    width: 2ch;
+    font-size: 14px;
+    color: rgba(171, 171, 171, 1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .frame-input__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .frame-input__title {
+        font-size: 13px;
+    }
+
+    .frame-input__subtitle,
+    .frame-input__value,
+    .frame-input__date-value,
+    .frame-input__time-value {
+        font-size: 13px;
+    }
+
+    .frame-input__info {
+        justify-content: flex-start;
+        margin-right: 0;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .frame-input__title {
+        font-size: 12px;
+    }
+
+    .frame-input__subtitle,
+    .frame-input__value,
+    .frame-input__date-value,
+    .frame-input__time-value {
+        font-size: 12px;
+    }
+
+    .frame-input__content {
+        gap: 6px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .frame-input__title {
+        font-size: 11px;
+    }
+
+    .frame-input__subtitle,
+    .frame-input__value,
+    .frame-input__date-value,
+    .frame-input__time-value {
+        font-size: 11px;
+    }
+}

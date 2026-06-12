@@ -1,0 +1,1 @@
+from .tanslations import TranslationMixin

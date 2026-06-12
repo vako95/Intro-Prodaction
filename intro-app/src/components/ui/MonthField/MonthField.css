@@ -1,0 +1,229 @@
+.month-field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    z-index: 99999;
+    position: relative;
+
+}
+
+.rryut {
+    width: 100%;
+    height: 100%;
+
+}
+
+.month-field__input {
+    width: auto;
+    height: auto;
+    display: none;
+    visibility: hidden;
+}
+
+.month-field__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    visibility: visible;
+}
+
+.month-field__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px;
+
+    border: 0.5px solid rgba(255, 255, 255, 0.242);
+    visibility: visible;
+    pointer-events: all;
+}
+
+.month-field__heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 1rem;
+    color: #818080f4;
+    display: flex;
+    transition: color 100ms linear;
+}
+
+.month-field--open .month-field__icon {
+    transform-origin: center center;
+    transform: rotate(180deg);
+    color: rgba(170, 132, 83);
+}
+
+.month-field--open .month-field__heading-title {
+    color: rgba(170, 132, 83);
+}
+
+.month-field__content:hover .month-field__heading-title,
+.month-field__content:hover .month-field__icon {
+    color: rgba(170, 132, 83);
+}
+
+.month-field__icon {
+    display: flex;
+    transition: color 100ms linear;
+    transition: transform 200ms ease, color 100ms linear;
+}
+
+.month-field__date {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    overflow-y: auto;
+
+}
+
+.month-field__select {
+    width: 100%;
+    height: auto;
+    min-height: 192px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    border: 0.5px solid rgba(255, 255, 255, 0.242);
+    border-top: none;
+    background-color: black;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    gap: 4px;
+    position: absolute;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms ease, opacity 250ms ease, visibility 250ms ease;
+    padding: 16px;
+    gap: 8px;
+    position: absolute;
+    overflow-y: scroll;
+    z-index: 100000;
+}
+
+
+.month-field--open .month-field__select {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.month-field__item {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 1rem;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: color 250ms ease, margin-left 250ms linear;
+    pointer-events: all;
+
+    /* visibility: visible;
+    pointer-events: auto; */
+}
+
+.month-field__item:hover {
+    margin-left: 4px;
+}
+
+
+.month-field__item--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+
+
+.month-field__item:hover {
+    background-color: transparent;
+    color: rgba(170, 132, 83);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .month-field__heading {
+        padding: 14px;
+    }
+
+    .month-field__heading-title {
+        font-size: 0.95rem;
+    }
+
+    .month-field__select {
+        padding: 14px;
+        gap: 7px;
+    }
+
+    .month-field__item {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .month-field__heading {
+        padding: 12px;
+    }
+
+    .month-field__heading-title {
+        font-size: 0.9rem;
+    }
+
+    .month-field__select {
+        padding: 12px;
+        gap: 6px;
+    }
+
+    .month-field__item {
+        font-size: 0.9rem;
+    }
+
+    .month-field__item:hover {
+        margin-left: 3px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .month-field__heading {
+        padding: 10px;
+    }
+
+    .month-field__heading-title {
+        font-size: 0.85rem;
+    }
+
+    .month-field__select {
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .month-field__item {
+        font-size: 0.85rem;
+    }
+
+    .month-field__item:hover {
+        margin-left: 2px;
+    }
+}

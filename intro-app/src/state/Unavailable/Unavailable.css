@@ -1,0 +1,123 @@
+.unavailable {
+    /* width: 50%; */
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.unavailable__container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1px solid rgba(170, 132, 83, 0.5);
+    border-bottom: 1px solid rgba(170, 132, 83, 0.5); */
+    padding: 32px 64px;
+    overflow: hidden;
+}
+
+.unavailable__heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.unavailable__heading-icon {
+    font-size: 24px;
+    display: flex;
+    color: rgba(170, 132, 83, 1);
+    margin-right: 8px;
+}
+
+.unavailable__heading-title {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+}
+
+.unavailable__content {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.unavailable__message {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(167, 155, 155);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unavailable__panel {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(170, 132, 83, 1);
+    padding: 32px;
+}
+
+.unavailable__wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.unavailable__wrapper-icon {
+    font-size: 32px;
+    display: flex;
+    color: rgba(170, 132, 83, 1);
+}
+
+.unavailable__content {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.unavailable__title {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 16px;
+}

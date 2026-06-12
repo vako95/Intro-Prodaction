@@ -1,0 +1,178 @@
+.slider__promo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 118px);
+    position: relative;
+    z-index: 9999;
+    contain: layout style;
+}
+
+.slider__promo-logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider__promo-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    content-visibility: auto;
+}
+
+.slider__promo-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+.slider__promo-title {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255);
+    margin-bottom: 32px;
+}
+
+.slider__promo-content {
+    font-family: "Gilda Display";
+    max-width: 640px;
+    font-size: 54px;
+    line-height: 67px;
+    font-weight: 400;
+    white-space: wrap;
+    color: rgba(255, 255, 255);
+    text-transform: uppercase;
+    overflow: hidden;
+    contain: layout style paint;
+}
+
+.slider__promo-link {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .slider__promo {
+        height: calc(100% - 80px);
+    }
+
+    .slider__promo-header {
+        padding: 20px 0;
+    }
+
+    .slider__promo-header>.fade__in-left {
+        justify-content: center !important;
+    }
+
+
+    .slider__promo-title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .slider__promo-content {
+        max-width: 100%;
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .slider__promo-link {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .slider__promo {
+        height: calc(100% - 90px);
+    }
+
+    .slider__promo-header {
+        padding: 24px 0;
+    }
+
+    .slider__promo-title {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .slider__promo-content {
+        max-width: 100%;
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .slider__promo-link {
+        font-size: 15px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .slider__promo {
+        height: calc(100% - 100px);
+    }
+
+    .slider__promo-header {
+        padding: 28px 0;
+    }
+
+    .slider__promo-title {
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+
+    .slider__promo-content {
+        max-width: 90%;
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .slider__promo-link {
+        font-size: 16px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .slider__promo {
+        height: calc(100% - 110px);
+    }
+
+    .slider__promo-title {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .slider__promo-content {
+        max-width: 580px;
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .slider__promo-link {
+        font-size: 17px;
+    }
+}

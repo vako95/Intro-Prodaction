@@ -1,0 +1,71 @@
+.footer__navigation {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__navigation-heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.footer__navigation-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer__navigation {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer__navigation-heading {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .footer__navigation-title {
+        font-size: 22px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer__navigation-heading {
+        margin-bottom: 16px;
+    }
+
+    .footer__navigation-title {
+        font-size: 20px;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .footer__navigation-heading {
+        margin-bottom: 14px;
+    }
+
+    .footer__navigation-title {
+        font-size: 18px;
+    }
+}

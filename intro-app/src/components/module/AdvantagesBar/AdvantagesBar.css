@@ -1,0 +1,79 @@
+.advantages-bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+.advantages-bar__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.advantages-bar__card {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.advantages-bar__skeleton {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .advantages-bar {
+        padding: 24px 0;
+    }
+
+    .advantages-bar__heading {
+        margin-bottom: 24px;
+    }
+
+    .advantages-bar__skeleton {
+        height: 200px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .advantages-bar {
+        padding: 20px 0;
+    }
+
+    .advantages-bar__heading {
+        margin-bottom: 20px;
+    }
+
+    .advantages-bar__skeleton {
+        height: 180px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .advantages-bar {
+        padding: 16px 0;
+    }
+
+    .advantages-bar__skeleton {
+        height: 150px;
+    }
+}

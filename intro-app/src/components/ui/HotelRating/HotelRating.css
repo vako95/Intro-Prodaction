@@ -1,0 +1,83 @@
+.hotel-rating {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer;
+    --star-full: #ffffff;
+    --star-half: rgba(255, 255, 255, 0.8);
+    --star-empty: rgba(255, 255, 255, 0.5);
+}
+
+.hotel-rating__icon {
+    display: flex;
+    font-size: var(--rating-size);
+}
+
+.hotel-rating__icon:hover {
+    transform: scale(1.2);
+}
+
+:root {
+    --star-full-light: rgba(255, 255, 255, 1);
+    --star-half-light: rgba(255, 255, 255, 0.8);
+    --star-empty-light: rgba(255, 255, 255, 0.4);
+
+    --star-full-gold: rgba(170, 132, 83, 1);
+    --star-half-gold: rgba(170, 132, 83, 0.8);
+    --star-empty-gold: rgba(170, 132, 83, 0.4);
+}
+
+.hotel-rating__icon--full {
+    color: var(--star-full);
+}
+
+.hotel-rating__icon--half {
+    color: var(--star-half);
+}
+
+.hotel-rating__icon--empty {
+    color: var(--star-empty);
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .hotel-rating__icon {
+        font-size: calc(var(--rating-size) * 0.9);
+    }
+
+    .hotel-rating__icon:hover {
+        transform: scale(1.15);
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .hotel-rating__icon {
+        font-size: calc(var(--rating-size) * 0.85);
+    }
+
+    .hotel-rating__icon:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .hotel-rating__icon {
+        font-size: calc(var(--rating-size) * 0.8);
+    }
+
+    .hotel-rating__icon:hover {
+        transform: scale(1.05);
+    }
+}

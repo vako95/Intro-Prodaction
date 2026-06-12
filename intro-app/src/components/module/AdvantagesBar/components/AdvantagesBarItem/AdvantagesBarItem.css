@@ -1,0 +1,177 @@
+.advantages-bar__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid rgba(29, 29, 29, 1);
+    background-color: rgba(17, 17, 17, 1);
+    padding: 38px 12px;
+    transition: background-color 250ms linear;
+}
+
+.advantages-bar__item::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 8px;
+    background-color: rgba(29, 29, 29, 1);
+}
+
+.advantages-bar__item:hover {
+    background-color: rgba(34, 34, 34, 1);
+    transition: background-color 250ms linear;
+}
+
+.advantages-bar__item-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 58px;
+    max-height: 58px;
+    display: flex;
+    color: rgba(171, 133, 85, 1);
+    margin-bottom: 16px;
+}
+
+.advantages-bar__item-cover-icon {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: 100% 100%;
+}
+
+.advantages-bar__item-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.advantages-bar__item-content-title {
+    max-width: 200px;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    margin-bottom: 16px;
+    transition: color 250ms linear;
+}
+
+.advantages-bar__item:hover .advantages-bar__item-content-title {
+    color: rgba(238, 238, 238, 1);
+    transition: color 250ms linear;
+}
+
+.advantages-bar__item-content-desc {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(204, 197, 197);
+    transition: color 250ms linear;
+}
+
+.advantages-bar__item:hover .advantages-bar__item-content-desc {
+    color: rgb(255, 255, 255);
+    transition: color 250ms linear;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .advantages-bar__item {
+        padding: 32px 10px;
+    }
+
+    .advantages-bar__item::before {
+        width: 56px;
+        height: 7px;
+    }
+
+    .advantages-bar__item-cover {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 14px;
+    }
+
+    .advantages-bar__item-content-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+        max-width: 180px;
+    }
+
+    .advantages-bar__item-content-desc {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .advantages-bar__item {
+        padding: 28px 8px;
+    }
+
+    .advantages-bar__item::before {
+        width: 48px;
+        height: 6px;
+    }
+
+    .advantages-bar__item-cover {
+        max-width: 44px;
+        max-height: 44px;
+        margin-bottom: 12px;
+    }
+
+    .advantages-bar__item-content-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+        max-width: 160px;
+    }
+
+    .advantages-bar__item-content-desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .advantages-bar__item {
+        padding: 24px 6px;
+    }
+
+    .advantages-bar__item::before {
+        width: 40px;
+        height: 5px;
+    }
+
+    .advantages-bar__item-cover {
+        max-width: 40px;
+        max-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .advantages-bar__item-content-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+        max-width: 140px;
+    }
+
+    .advantages-bar__item-content-desc {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}

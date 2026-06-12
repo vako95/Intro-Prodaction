@@ -1,0 +1,35 @@
+.faq__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .faq__list {
+        gap: 12px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .faq__list {
+        gap: 14px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .faq__list {
+        gap: 15px;
+    }
+}

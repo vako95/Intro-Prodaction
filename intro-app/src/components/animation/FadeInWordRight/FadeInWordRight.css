@@ -1,0 +1,7 @@
+.fade__in-word-right {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

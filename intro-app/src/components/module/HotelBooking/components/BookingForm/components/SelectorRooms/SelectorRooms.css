@@ -1,0 +1,210 @@
+.hotel-booking__form-selector-rooms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+/* ROOMS DROPDOWN */
+.hotel-booking__rooms-dropdown {
+    width: 100%;
+    max-height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    backdrop-filter: blur(14px);
+    ;
+    opacity: 0;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    z-index: 2;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.hotel-booking__rooms-dropdown.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.hotel-booking__rooms-dropdown.closed {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+
+.hotel-booking__rooms-container {
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hotel-booking__rooms-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    backdrop-filter: blur(14px);
+}
+
+.hotel-booking__rooms-content-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    backdrop-filter: blur(14px);
+}
+
+.hotel-booking__rooms-content-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255);
+    overflow-wrap: break-word;
+}
+
+.hotel-booking__rooms-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hotel-booking__rooms-decrease,
+.hotel-booking__rooms-increase {
+    all: unset;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 400;
+    color: rgba(255, 255, 255);
+    display: flex;
+}
+
+.hotel-booking__rooms-icon {
+    font-size: 18px !important;
+    color: inherit !important;
+    display: flex;
+}
+
+.hotel-booking__rooms-count {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(170, 132, 83);
+    display: flex;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .hotel-booking__form-selector-rooms {
+        margin-bottom: 3px;
+    }
+
+    .hotel-booking__rooms-dropdown {
+        backdrop-filter: blur(10px);
+    }
+
+    .hotel-booking__rooms-container {
+        padding: 28px;
+    }
+
+    .hotel-booking__rooms-content-title {
+        font-size: 15px;
+    }
+
+    .hotel-booking__rooms-decrease,
+    .hotel-booking__rooms-increase {
+        font-size: 24px;
+    }
+
+    .hotel-booking__rooms-icon {
+        font-size: 16px !important;
+    }
+
+    .hotel-booking__rooms-count {
+        font-size: 15px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hotel-booking__form-selector-rooms {
+        margin-bottom: 2px;
+    }
+
+    .hotel-booking__rooms-dropdown {
+        backdrop-filter: blur(8px);
+    }
+
+    .hotel-booking__rooms-container {
+        padding: 24px;
+    }
+
+    .hotel-booking__rooms-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hotel-booking__rooms-content-title {
+        font-size: 14px;
+    }
+
+    .hotel-booking__rooms-decrease,
+    .hotel-booking__rooms-increase {
+        font-size: 22px;
+    }
+
+    .hotel-booking__rooms-icon {
+        font-size: 15px !important;
+    }
+
+    .hotel-booking__rooms-count {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .hotel-booking__rooms-dropdown {
+        backdrop-filter: blur(6px);
+    }
+
+    .hotel-booking__rooms-container {
+        padding: 20px;
+    }
+
+    .hotel-booking__rooms-content-title {
+        font-size: 13px;
+    }
+
+    .hotel-booking__rooms-decrease,
+    .hotel-booking__rooms-increase {
+        font-size: 20px;
+    }
+
+    .hotel-booking__rooms-icon {
+        font-size: 14px !important;
+    }
+
+    .hotel-booking__rooms-count {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,566 @@
+/* .section__feature {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 32px 0px;
+}
+
+.section__feature-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+.section__feature-heading-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(167, 155, 155);
+    text-transform: uppercase;
+    letter-spacing: 7.8px;
+}
+
+.section__feature-heading-badge {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__feature-badge-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-word {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: 200;
+    color: rgba(238, 238, 238);
+    text-transform: capitalize;
+    line-height: 48px;
+}
+
+.section__feature-info-summary {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    line-height: 28px;
+    color: rgb(170, 132, 83);
+    margin-bottom: 32px;
+}
+
+
+.section__feature-info-desc {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: rgb(167, 155, 155);
+}
+
+
+.section__feature-points {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section__feature-points-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section__feature-points-list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.section__feature-points-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section__feature-points-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.section__feature-points-wrapper {
+    width: 114px;
+    height: 64px;
+    display: flex;
+    margin-right: 22px;
+    flex-shrink: 0;
+}
+
+.section__feature-points-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-points-title {
+    max-width: 120px;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(238, 238, 238);
+    letter-spacing: -0.5px;
+    line-height: 28px
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section__feature {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 32px 0px;
+}
+
+.section__feature-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+.section__feature-heading-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(167, 155, 155);
+    text-transform: uppercase;
+    letter-spacing: 7.8px;
+}
+
+.section__feature-heading-badge {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__feature-badge-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.section__feature-info-word {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: 200;
+    color: rgba(238, 238, 238);
+    text-transform: capitalize;
+    line-height: 48px;
+}
+
+.section__feature-info-summary {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    line-height: 28px;
+    color: rgb(170, 132, 83);
+    margin-bottom: 32px;
+}
+
+
+.section__feature-info-desc {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: rgb(167, 155, 155);
+}
+
+
+.section__feature-points {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.section__feature-points-item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.section__feature-points-wrapper {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    margin-right: 22px;
+}
+
+.section__feature-points-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section__feature-points-title {
+    max-width: 120px;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(238, 238, 238);
+    letter-spacing: -0.5px;
+    line-height: 28px
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .section__feature {
+        padding: 20px 0;
+    }
+
+    .section__feature-heading-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .section__feature-heading-badge {
+        width: 28px;
+        height: 28px;
+    }
+
+    .section__feature-info-word {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .section__feature-info-summary {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    .section__feature-info-desc {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .section__feature-points {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .section__feature-points-wrapper {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+    }
+
+    .section__feature-points-title {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 100%;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .section__feature {
+        padding: 24px 0;
+    }
+
+    .section__feature-heading-title {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .section__feature-heading-badge {
+        width: 32px;
+        height: 32px;
+    }
+
+    .section__feature-info-word {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .section__feature-info-summary {
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section__feature-info-desc {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .section__feature-points {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .section__feature-points-wrapper {
+        width: 52px;
+        height: 52px;
+        margin-right: 16px;
+    }
+
+    .section__feature-points-title {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .section__feature {
+        padding: 28px 0;
+    }
+
+    .section__feature-heading-title {
+        font-size: 15px;
+        letter-spacing: 6px;
+    }
+
+    .section__feature-heading-badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    .section__feature-info-word {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .section__feature-info-summary {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 28px;
+    }
+
+    .section__feature-info-desc {
+        font-size: 15px;
+        line-height: 27px;
+    }
+
+    .section__feature-points {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .section__feature-points-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-right: 18px;
+    }
+
+    .section__feature-points-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .section__feature-info-word {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .section__feature-info-summary {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+    .section__feature-points {
+        gap: 36px;
+    }
+
+    .section__feature-points-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    .section__feature-points-title {
+        font-size: 19px;
+        line-height: 27px;
+    }
+}
+
+
+/* Phone number link styles */
+.section__feature-points-num {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(170, 132, 83);
+    text-decoration: none;
+    margin-top: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.section__feature-points-num:hover {
+    color: rgb(220, 182, 133);
+    transform: translateX(2px);
+}
+
+.section__feature-points-num:active {
+    color: rgb(238, 238, 238);
+}
+
+/* Responsive phone number */
+@media (max-width: 320px) {
+    .section__feature-points-num {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section__feature-points-num {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section__feature-points-num {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,68 @@
+.footer__about-brand {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+}
+
+.footer__about-img {
+    width: 180px;
+    height: auto;
+}
+
+.footer__about-link-brand {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__about-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer__about-brand {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .footer__about-img {
+        width: 160px;
+    }
+
+    .footer__about-link {
+        justify-content: center;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer__about-brand {
+        margin-bottom: 16px;
+    }
+
+    .footer__about-img {
+        width: 140px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .footer__about-brand {
+        margin-bottom: 14px;
+    }
+
+    .footer__about-img {
+        width: 120px;
+    }
+}

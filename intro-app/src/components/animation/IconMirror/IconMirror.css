@@ -1,0 +1,17 @@
+.icon-mirror {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.anime-mirror {
+    transition: transform 0.32s linear;
+}
+
+.icon-mirror__effect:hover .anime-mirror {
+    transform: scaleX(-1);
+    transition: transform 0.3s linear;
+}

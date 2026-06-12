@@ -1,0 +1,279 @@
+.rooms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding: 80px 0px; */
+}
+
+.rooms__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.rooms__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+#swap-skeleton {
+    height: 300px;
+}
+
+.rooms__unavailable {
+    width: 100%;
+    display: flex;
+}
+
+.rooms__unavailable .rooms__items {
+    display: flex;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large tablets and below (1024px) */
+@media (max-width: 1024px) {
+    .rooms__heading {
+        margin-bottom: 48px;
+    }
+
+    .rooms__list {
+        gap: 14px;
+    }
+}
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .rooms__heading {
+        margin-bottom: 40px;
+    }
+
+    .rooms__list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #swap-skeleton {
+        height: 250px;
+    }
+}
+
+.rooms__item {
+    background-size: cover !important;
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+
+    .rooms__heading {
+        width: auto !important;
+        margin-bottom: 32px;
+    }
+
+    .rooms__list {
+        gap: 12px;
+    }
+
+    .rooms__item {
+        background-size: cover !important;
+        min-height: 184px !important;
+    }
+
+    #swap-skeleton {
+        height: 220px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .rooms__heading {
+        width: auto !important;
+        margin-bottom: 28px;
+    }
+
+    .rooms__list {
+        gap: 10px;
+    }
+
+    .rooms__item {
+        background-size: cover !important;
+        min-height: 184px !important;
+    }
+
+    #swap-skeleton {
+        height: 200px;
+    }
+}
+
+
+/* СТИЛИ ДЛЯ ПАГИНАЦИИ КОМНАТ */
+.rooms__pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.rooms__pagination::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(170, 132, 83, 0.3) 20%,
+            rgba(170, 132, 83, 0.7) 50%,
+            rgba(170, 132, 83, 0.3) 80%,
+            transparent 100%);
+    box-shadow: 0 0 15px rgba(170, 132, 83, 0.4);
+}
+
+/* Переопределяем стили пагинации для комнат */
+.rooms__pagination .pagination-fx {
+    animation: roomsPaginationFadeIn 0.6s ease-out;
+}
+
+@keyframes roomsPaginationFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rooms__pagination .pagination-fx__button {
+    min-width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg,
+            rgba(46, 41, 41, 0.7) 0%,
+            rgba(36, 31, 31, 0.6) 100%) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 2px solid rgba(170, 132, 83, 0.35) !important;
+    border-radius: 12px !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.rooms__pagination .pagination-fx__button:hover:not(:disabled) {
+    border-color: rgba(170, 132, 83, 0.8) !important;
+    background: linear-gradient(135deg,
+            rgba(46, 41, 41, 0.85) 0%,
+            rgba(36, 31, 31, 0.75) 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.rooms__pagination .pagination-fx__button--active {
+    background: linear-gradient(135deg,
+            rgba(170, 132, 83, 1) 0%,
+            rgba(190, 152, 103, 1) 50%,
+            rgba(170, 132, 83, 1) 100%) !important;
+    background-size: 200% 100% !important;
+    border-color: rgba(170, 132, 83, 1) !important;
+    color: #fff !important;
+    box-shadow:
+        0 6px 25px rgba(170, 132, 83, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2) !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.rooms__pagination .pagination-fx__button--active:hover {
+    background-position: 100% 0 !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow:
+        0 10px 35px rgba(170, 132, 83, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.rooms__pagination .pagination-fx__button:disabled {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    border-color: rgba(170, 132, 83, 0.2) !important;
+    transform: none !important;
+}
+
+.rooms__pagination .pagination-fx__ellipsis {
+    color: rgba(170, 132, 83, 0.9) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Адаптивность для пагинации комнат */
+@media (max-width: 768px) {
+    .rooms__pagination {
+        margin-top: 48px;
+        padding: 32px 0;
+    }
+
+    .rooms__pagination::before {
+        width: 70%;
+    }
+
+    .rooms__pagination .pagination-fx__button {
+        min-width: 42px;
+        height: 42px;
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .rooms__pagination {
+        margin-top: 36px;
+        padding: 24px 0;
+    }
+
+    .rooms__pagination::before {
+        width: 85%;
+    }
+
+    .rooms__pagination .pagination-fx__button {
+        min-width: 38px !important;
+        height: 38px !important;
+        font-size: 14px !important;
+        border-radius: 10px !important;
+    }
+
+    .rooms__pagination .pagination-fx__ellipsis {
+        font-size: 16px !important;
+    }
+}

@@ -1,0 +1,30 @@
+.rooms__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Grid View (default) */
+.rooms__list--grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* List View */
+.rooms__list--list {
+    grid-template-columns: 1fr;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .rooms__list--grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms__list {
+        gap: 12px;
+    }
+}

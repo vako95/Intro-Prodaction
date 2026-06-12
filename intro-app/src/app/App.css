@@ -1,0 +1,22 @@
+#my-tooltip {
+    max-width: 256px;
+    line-height: 1.4;
+    z-index: 9999;
+}
+
+/* TanStack Query Devtools - должны быть поверх всех элементов */
+[class*="tsqd-"] {
+    z-index: 999999 !important;
+}
+
+/* Кнопка открытия devtools */
+button[aria-label*="Open React Query Devtools"],
+button[aria-label*="Close React Query Devtools"] {
+    z-index: 999999 !important;
+}
+
+/* Панель devtools */
+aside[class*="tsqd-"],
+div[class*="tsqd-parent-container"] {
+    z-index: 999999 !important;
+}

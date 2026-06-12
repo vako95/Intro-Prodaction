@@ -1,0 +1,413 @@
+.pricing {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 0px;
+
+}
+
+.pricing__loading,
+.pricing__error {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing__error {
+    color: rgba(220, 53, 69);
+}
+
+.pricing__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    list-style: none;
+}
+
+
+
+
+.pricing__item {
+    position: relative;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 18, 18, 0.9) 100%);
+}
+
+
+
+.pricing__item-content {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 36px;
+    z-index: 2;
+    max-height: none;
+    overflow: visible;
+}
+
+.pricing__item-content::before {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: 0;
+    width: 36%;
+    height: 12px;
+    background-color: rgb(170, 132, 83);
+}
+
+.pricing__item-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(170, 132, 83, 0.2);
+}
+
+.pricing__item-heading-price {
+    max-width: 150px;
+    color: rgb(170, 132, 83);
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    /* line-height: 48px; */
+    margin-bottom: 16px;
+}
+
+.pricing__item-heading-period {
+    max-width: 150px;
+    color: rgba(102, 102, 102, 1);
+    font-family: "Gilda Display", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* line-height: 14px */
+}
+
+.pricing__item-heading-period::before {
+    content: "/";
+    margin: 4px;
+}
+
+.pricing__item-heading-title {
+    max-width: 150px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400
+}
+
+.pricing__item-heading-subtitle {
+    max-width: 150px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.pricing__item-feautures {
+    width: 100%;
+    height: auto;
+    min-height: 262px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    gap: 16px;
+}
+
+.pricing__item-feauture {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.pricing__item-feauture:last-of-type {
+    margin-bottom: 16px;
+}
+
+.pricing__item-feauture-icon {
+    font-size: 16px;
+    display: flex;
+    margin-right: 16px;
+    color: rgba(170, 132, 83);
+}
+
+.pricing__item-feauture-title {
+    max-width: 150px;
+    color: rgba(255, 255, 255, 0.683);
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    line-height: 26px;
+}
+
+.pricing__item-media {
+    width: 50%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing__item-media-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.pricing__item-media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.btr {
+    width: 100%;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.pricing__item-content .btr button,
+.pricing__item-content .btr {
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.5);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.pricing__item-feautures .btr::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.pricing__item-feautures .btr::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 0;
+}
+
+.pricing__item-feautures .btr:hover {
+    transform: translateY(-4px) scale(1.02);
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgba(190, 152, 103, 1) 0%, rgba(170, 132, 83, 1) 100%);
+    border-color: rgba(190, 152, 103, 1);
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(170, 132, 83, 0.6),
+        0 0 60px rgba(170, 132, 83, 0.3),
+        0 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+
+.pricing__item-feautures .btr:hover::before {
+    opacity: 1;
+}
+
+.pricing__item-feautures .btr:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.pricing__item-feautures .btr:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(170, 132, 83, 0.4);
+}
+
+.pricing__item-feautures .btr span,
+.pricing__item-feautures .btr>* {
+    position: relative;
+    z-index: 1;
+}
+
+
+@media (max-width: 1024px) {
+    .pricing__list {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .pricing__item {
+        flex-direction: column;
+    }
+
+    .pricing__item-content {
+        width: 100%;
+        position: relative;
+        max-height: none;
+    }
+
+    .pricing__item-media {
+        width: 100%;
+        min-height: 350px;
+    }
+}
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .pricing {
+        padding: 80px 0;
+    }
+
+    .pricing__list {
+        gap: 40px;
+    }
+
+    .pricing__item-content {
+        padding: 28px;
+    }
+
+    .pricing__item-heading {
+        margin-bottom: 28px;
+    }
+
+    .pricing__item-heading-price {
+        font-size: 40px;
+    }
+
+    .pricing__item-heading-title {
+        font-size: 22px;
+    }
+
+    .pricing__item-feautures {
+        gap: 14px;
+    }
+
+    .pricing__item-media {
+        min-height: 300px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .pricing {
+        padding: 60px 0;
+    }
+
+    .pricing__list {
+        gap: 32px;
+    }
+
+    .pricing__item {
+        flex-direction: column;
+    }
+
+    .pricing__item-content {
+        padding: 24px;
+        width: 100%;
+    }
+
+    .pricing__item-content::before {
+        left: 24px;
+        width: 40%;
+    }
+
+    .pricing__item-heading {
+        margin-bottom: 24px;
+    }
+
+    .pricing__item-heading-price {
+        font-size: 36px;
+    }
+
+    .pricing__item-heading-title {
+        font-size: 20px;
+    }
+
+    .pricing__item-feauture-title {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .pricing__item-media {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .pricing {
+        padding: 48px 0;
+    }
+
+    .pricing__item-content {
+        padding: 20px;
+    }
+
+    .pricing__item-heading-price {
+        font-size: 32px;
+    }
+
+    .pricing__item-heading-title {
+        font-size: 18px;
+    }
+
+    .pricing__item-media {
+        height: 200px;
+    }
+}

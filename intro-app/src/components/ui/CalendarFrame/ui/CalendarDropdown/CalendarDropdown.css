@@ -1,0 +1,191 @@
+.calendar__frame-dropdown {
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    background-color: rgba(0, 0, 0, 0.879);
+    color: aliceblue;
+    border: 1px solid rgba(170, 132, 83);
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: max-height 200ms linear, opacity 200ms linear, transform 200ms linear;
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+    padding: 36px;
+}
+
+.calendar__frame-dropdown.open {
+    transform: scaleY(1);
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+
+
+.calendar__frame-dropdown__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgba(231, 231, 231);
+}
+
+.calendar__frame-dropdown__wrapper:not(:last-of-type) {
+    margin-bottom: 36px;
+}
+
+.calendar__frame-dropdown-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.calendar-frame-dropdown__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.calendar-frame-dropdown__title {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgba(170, 132, 83);
+
+}
+
+.calendar-frame-dropdown__controls {
+    min-width: 150px;
+
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.calendar-frame-dropdown__value {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(170, 132, 83);
+}
+
+
+.calendar-frame-dropdown__button {
+    min-width: 14px;
+    min-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    color: inherit;
+
+}
+
+.calendar-frame-dropdown-icon {
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+
+
+.calendar-frame-dropdown__button:active {
+
+    color: rgba(170, 132, 83);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .calendar__frame-dropdown {
+        padding: 20px;
+    }
+
+    .calendar__frame-dropdown__wrapper:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+
+    .calendar-frame-dropdown__title,
+    .calendar-frame-dropdown__value {
+        font-size: 14px;
+    }
+
+    .calendar-frame-dropdown__controls {
+        min-width: 120px;
+    }
+
+    .calendar-frame-dropdown-icon {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .calendar__frame-dropdown {
+        padding: 24px;
+    }
+
+    .calendar__frame-dropdown__wrapper:not(:last-of-type) {
+        margin-bottom: 28px;
+    }
+
+    .calendar-frame-dropdown__title,
+    .calendar-frame-dropdown__value {
+        font-size: 15px;
+    }
+
+    .calendar-frame-dropdown__controls {
+        min-width: 130px;
+    }
+
+    .calendar-frame-dropdown-icon {
+        font-size: 17px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .calendar__frame-dropdown {
+        padding: 28px;
+    }
+
+    .calendar__frame-dropdown__wrapper:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    .calendar-frame-dropdown__controls {
+        min-width: 140px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .calendar__frame-dropdown {
+        padding: 32px;
+    }
+
+    .calendar__frame-dropdown__wrapper:not(:last-of-type) {
+        margin-bottom: 32px;
+    }
+}

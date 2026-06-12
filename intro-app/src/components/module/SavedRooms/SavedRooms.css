@@ -1,0 +1,223 @@
+.saved-rooms {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.saved-rooms__header {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.saved-rooms__title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--color-primary, #aa8454);
+    margin-bottom: 8px;
+}
+
+.saved-rooms__subtitle {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.saved-rooms__loading,
+.saved-rooms__error {
+    text-align: center;
+    padding: 48px 24px;
+    font-size: 18px;
+    color: #666;
+}
+
+.saved-rooms__error {
+    color: #e74c3c;
+}
+
+/* Empty State */
+.saved-rooms__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.saved-rooms__empty-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #ddd;
+}
+
+.saved-rooms__empty-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-primary, #aa8454);
+    margin-bottom: 16px;
+}
+
+.saved-rooms__empty-text {
+    font-size: 16px;
+    color: #666;
+    max-width: 400px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.saved-rooms__empty-link {
+    text-decoration: none;
+}
+
+/* Grid */
+.saved-rooms__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+/* Card */
+.saved-rooms__card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saved-rooms__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.saved-rooms__card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.saved-rooms__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.saved-rooms__card:hover .saved-rooms__card-image {
+    transform: scale(1.05);
+}
+
+.saved-rooms__card-wishlist {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+.saved-rooms__card-content {
+    padding: 24px;
+}
+
+.saved-rooms__card-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-primary, #aa8454);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.saved-rooms__card-title:hover {
+    color: #8b6a3f;
+}
+
+.saved-rooms__card-subtitle {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.saved-rooms__card-excerpt {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.saved-rooms__card-details {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.saved-rooms__card-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #666;
+}
+
+.saved-rooms__card-detail svg {
+    color: var(--color-primary, #aa8454);
+}
+
+.saved-rooms__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saved-rooms__card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.saved-rooms__card-price-amount {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-primary, #aa8454);
+}
+
+.saved-rooms__card-price-period {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .saved-rooms {
+        padding: 32px 16px;
+    }
+
+    .saved-rooms__title {
+        font-size: 36px;
+    }
+
+    .saved-rooms__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .saved-rooms__card-image-wrapper {
+        height: 200px;
+    }
+}

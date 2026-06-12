@@ -1,0 +1,172 @@
+.booking-frame {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: silver; */
+    /* padding: 54px 42px; */
+}
+
+.booking-frame__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.booking-frame__heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: rgba(171, 133, 85, 1);
+}
+
+.booking-frame__heading-subtitle {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(238, 238, 238, 1);
+}
+
+.booking-frame__heading-subtitle-price {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(171, 171, 171, 1);
+}
+
+.booking-frame__heading-subtitle-price::after {
+    content: "/";
+    margin: 2px;
+}
+
+.booking-frame__form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.booking-frame__form-field {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+/* .booking-frame__form .booking-frame__form-field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(170, 132, 83);
+    padding: 12px;
+} */
+
+.booking-frame__form-field:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+/* .xuyesos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .booking-frame__form .xuyesos {
+    flex-direction: row;
+} */
+
+.booking-frame__form-field-value {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+}
+
+.booking-frame__form-field-icon {
+    display: flex;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .booking-frame__heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .booking-frame__heading-title {
+        font-size: 28px;
+    }
+
+    .booking-frame__form-field:not(:last-of-type) {
+        margin-bottom: 14px;
+    }
+
+    .booking-frame__form-field-value {
+        font-size: 13px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .booking-frame__heading {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .booking-frame__heading-title {
+        font-size: 24px;
+    }
+
+    .booking-frame__heading-subtitle {
+        font-size: 14px;
+    }
+
+    .booking-frame__form-field:not(:last-of-type) {
+        margin-bottom: 12px;
+    }
+
+    .booking-frame__form-field-value {
+        font-size: 12px;
+    }
+
+    .booking-frame__form-field-icon {
+        font-size: 11px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .booking-frame__heading-title {
+        font-size: 22px;
+    }
+
+    .booking-frame__heading-subtitle {
+        font-size: 13px;
+    }
+}

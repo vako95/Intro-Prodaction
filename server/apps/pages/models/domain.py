@@ -1,0 +1,41 @@
+from django.db import models
+from django.urls import reverse
+from .base import BaseModel, TimeStampedModel
+from .mixins import SlugMixin
+
+
+class Domain(BaseModel, TimeStampedModel, SlugMixin):
+    slug_source_field = "name_en"
+
+    name_en = models.CharField(
+        max_length=150,
+        unique=True,
+        blank=False,
+        null=False,
+        verbose_name="Domain Name",
+        help_text="Enter the unique name of the domain (max 150 characters).",
+    )
+    name_ru = models.CharField(
+        max_length=150,
+        unique=True,
+        blank=True,
+        null=False,
+        verbose_name="Domain Name (RU)",
+        help_text="Enter the unique name of the domain in Russian (max 150 characters).",
+    )
+    name_az = models.CharField(
+        max_length=150,
+        unique=True,
+        blank=True,
+        null=False,
+        verbose_name="Domain Name (AZ)",
+        help_text="Enter the unique name of the domain in Azerbaijani (max 150 characters).",
+    )
+
+    def __str__(self):
+        return self.name_az
+
+    class Meta:
+        verbose_name = "Domain"
+        verbose_name_plural = "Domains"
+        ordering = ("-created_at",)

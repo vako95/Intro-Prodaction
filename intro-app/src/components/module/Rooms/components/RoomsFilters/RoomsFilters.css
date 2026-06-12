@@ -1,0 +1,697 @@
+.rooms-filters {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.rooms-filters__container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(170, 132, 83, 0.2);
+    /* overflow-x: auto;
+    overflow-y: visible; */
+}
+
+.rooms-filters__container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.rooms-filters__container::-webkit-scrollbar-track {
+    background: rgba(170, 132, 83, 0.1);
+    border-radius: 3px;
+}
+
+.rooms-filters__container::-webkit-scrollbar-thumb {
+    background: rgba(170, 132, 83, 0.6);
+    border-radius: 3px;
+}
+
+.rooms-filters__container::-webkit-scrollbar-thumb:hover {
+    background: rgba(170, 132, 83, 0.8);
+}
+
+.rooms-filters__section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rooms-filters__label {
+    color: #aa8453;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* View Buttons */
+.rooms-filters__view-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.rooms-filters__view-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 4px;
+    color: #aa8453;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rooms-filters__view-btn:hover {
+    background: rgba(170, 132, 83, 0.1);
+    border-color: #aa8453;
+}
+
+.rooms-filters__view-btn.active {
+    background: #aa8453;
+    color: #fff;
+    border-color: #aa8453;
+}
+
+/* Dropdown */
+.rooms-filters__dropdown {
+    position: relative;
+    z-index: 200;
+}
+
+.rooms-filters__dropdown-btn {
+    min-width: 180px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rooms-filters__dropdown-btn:hover {
+    border-color: #aa8453;
+    background: rgba(170, 132, 83, 0.1);
+}
+
+.rooms-filters__dropdown-icon {
+    transition: transform 0.3s ease;
+    color: #aa8453;
+}
+
+.rooms-filters__dropdown-icon.open {
+    transform: rotate(180deg);
+}
+
+.rooms-filters__dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 300;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rooms-filters__dropdown-item {
+    width: 100%;
+    padding: 12px 16px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rooms-filters__dropdown-item:hover {
+    background: rgba(170, 132, 83, 0.1);
+}
+
+.rooms-filters__dropdown-item.active {
+    background: rgba(170, 132, 83, 0.2);
+    color: #aa8453;
+}
+
+/* Filter Button */
+.rooms-filters__filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 4px;
+    color: #aa8453;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.rooms-filters__filter-btn:hover {
+    background: rgba(170, 132, 83, 0.1);
+    border-color: #aa8453;
+}
+
+.rooms-filters__filter-btn.active {
+    background: #aa8453;
+    color: #fff;
+    border-color: #aa8453;
+}
+
+/* Filters Panel */
+.rooms-filters__panel {
+    margin-top: 16px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(170, 132, 83, 0.2);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rooms-filters__panel-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.rooms-filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rooms-filters__group-title {
+    color: #aa8453;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Price Inputs */
+.rooms-filters__price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rooms-filters__price-inputs span {
+    color: #fff;
+}
+
+.rooms-filters__input {
+    flex: 1;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.rooms-filters__input:focus {
+    outline: none;
+    border-color: #aa8453;
+    background: rgba(170, 132, 83, 0.1);
+}
+
+.rooms-filters__input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Capacity */
+.rooms-filters__capacity {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rooms-filters__capacity-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.rooms-filters__capacity-item span {
+    flex-shrink: 0;
+}
+
+.rooms-filters__capacity-item input {
+    width: 80px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Checkboxes */
+.rooms-filters__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rooms-filters__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rooms-filters__checkbox:hover {
+    color: #aa8453;
+}
+
+.rooms-filters__checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #aa8453;
+}
+
+/* Action Buttons */
+.rooms-filters__actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.rooms-filters__reset-btn,
+.rooms-filters__apply-btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rooms-filters__reset-btn {
+    background: transparent;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    color: #aa8453;
+}
+
+.rooms-filters__reset-btn:hover {
+    background: rgba(170, 132, 83, 0.1);
+    border-color: #aa8453;
+}
+
+.rooms-filters__apply-btn {
+    background: #aa8453;
+    border: 1px solid #aa8453;
+    color: #fff;
+}
+
+.rooms-filters__apply-btn:hover {
+    background: #8a6a3d;
+    border-color: #8a6a3d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .rooms-filters__container {
+        gap: 20px;
+        padding: 18px 20px;
+    }
+
+    .rooms-filters__section {
+        gap: 10px;
+    }
+
+    .rooms-filters__dropdown-btn {
+        min-width: 160px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .rooms-filters__filter-btn {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms-filters {
+        margin-bottom: 24px;
+    }
+
+    .rooms-filters__container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    /* Hide view mode on mobile */
+    .rooms-filters__section:first-child {
+        display: none;
+    }
+
+    /* Sort section - full width */
+    .rooms-filters__section {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .rooms-filters__label {
+        font-size: 13px;
+    }
+
+    .rooms-filters__dropdown {
+        width: 100%;
+    }
+
+    .rooms-filters__dropdown-btn {
+        width: 100%;
+        min-width: auto;
+        padding: 11px 14px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__filter-btn {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        padding: 11px 18px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel {
+        margin-top: 12px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rooms-filters__group {
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__group-title {
+        font-size: 15px;
+    }
+
+    .rooms-filters__price-inputs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__input {
+        padding: 10px 12px;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item {
+        font-size: 13px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item input {
+        width: 70px;
+        max-width: 70px;
+        flex-shrink: 0;
+    }
+
+    .rooms-filters__checkbox {
+        font-size: 13px;
+    }
+
+    .rooms-filters__actions {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .rooms-filters__reset-btn,
+    .rooms-filters__apply-btn {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .rooms-filters {
+        margin-bottom: 20px;
+    }
+
+    .rooms-filters__container {
+        padding: 14px;
+        gap: 10px;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__label {
+        font-size: 12px;
+    }
+
+    .rooms-filters__dropdown-btn {
+        padding: 10px 12px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__dropdown-icon {
+        font-size: 11px;
+    }
+
+    .rooms-filters__dropdown-menu {
+        border-radius: 6px;
+    }
+
+    .rooms-filters__dropdown-item {
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .rooms-filters__filter-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        gap: 6px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel {
+        margin-top: 10px;
+        padding: 16px;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel-content {
+        gap: 16px;
+    }
+
+    .rooms-filters__group {
+        gap: 9px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__group-title {
+        font-size: 14px;
+    }
+
+    .rooms-filters__price-inputs {
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__price-inputs span {
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .rooms-filters__input {
+        padding: 9px 10px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity {
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item {
+        font-size: 12px;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item span {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .rooms-filters__capacity-item input {
+        width: 60px;
+        max-width: 60px;
+        flex-shrink: 0;
+    }
+
+    .rooms-filters__checkboxes {
+        gap: 9px;
+    }
+
+    .rooms-filters__checkbox {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .rooms-filters__checkbox input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    .rooms-filters__actions {
+        gap: 8px;
+        margin-top: 6px;
+        width: 100%;
+    }
+
+    .rooms-filters__reset-btn,
+    .rooms-filters__apply-btn {
+        padding: 11px 18px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 360px) {
+    .rooms-filters__container {
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__dropdown-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__filter-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel {
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__panel-content {
+        gap: 14px;
+    }
+
+    .rooms-filters__group {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__group-title {
+        font-size: 13px;
+    }
+
+    .rooms-filters__price-inputs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__input {
+        padding: 8px 9px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item {
+        font-size: 11px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rooms-filters__capacity-item input {
+        width: 55px;
+        max-width: 55px;
+        flex-shrink: 0;
+    }
+
+    .rooms-filters__checkbox {
+        font-size: 11px;
+    }
+
+    .rooms-filters__reset-btn,
+    .rooms-filters__apply-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+}

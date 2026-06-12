@@ -1,0 +1,251 @@
+.facilities-hero {
+    width: 100%;
+    padding: var(--space-16) 0;
+    background: var(--color-bg-primary);
+}
+
+.facilities-hero__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.facilities-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.facilities-hero__label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-widest);
+    color: var(--color-primary);
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary-alpha-10);
+    border-radius: var(--radius-full);
+    width: fit-content;
+}
+
+.facilities-hero__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-tight);
+    color: var(--color-white);
+    font-family: var(--font-family-display);
+    margin: 0;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.facilities-hero__description {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-gray-400);
+    margin: 0;
+    font-style: italic;
+}
+
+.facilities-hero__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+}
+
+.facilities-hero__feature {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    padding: var(--space-4);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-primary-alpha-10);
+    transition: all var(--transition-base) var(--ease-out);
+}
+
+.facilities-hero__feature:hover {
+    background: var(--color-bg-tertiary);
+    border-color: var(--color-primary-alpha-30);
+    transform: translateX(var(--space-2));
+}
+
+.facilities-hero__feature-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+}
+
+.facilities-hero__feature-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.facilities-hero__feature-text {
+    flex: 1;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-gray-400);
+    margin: 0;
+    padding-top: var(--space-2);
+}
+
+.facilities-hero__image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+}
+
+.facilities-hero__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 50%;
+    background-color: var(--color-primary);
+    z-index: 2;
+}
+
+.facilities-hero__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-primary-alpha-20) 0%, transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.facilities-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slower) var(--ease-out);
+}
+
+.facilities-hero__image:hover .facilities-hero__img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .facilities-hero {
+        padding: var(--space-12) 0;
+    }
+
+    .facilities-hero__container {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .facilities-hero__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .facilities-hero__image {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .facilities-hero {
+        padding: var(--space-10) 0;
+    }
+
+    .facilities-hero__container {
+        padding: 0 var(--space-4);
+        gap: var(--space-8);
+    }
+
+    .facilities-hero__label {
+        font-size: 10px;
+        letter-spacing: var(--letter-spacing-wider);
+    }
+
+    .facilities-hero__title {
+        font-size: var(--font-size-xl);
+    }
+
+    .facilities-hero__description {
+        font-size: var(--font-size-sm);
+    }
+
+    .facilities-hero__feature {
+        padding: var(--space-3);
+    }
+
+    .facilities-hero__feature-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .facilities-hero__feature-text {
+        font-size: 13px;
+    }
+
+    .facilities-hero__image {
+        height: 350px;
+    }
+
+    .facilities-hero__image::before {
+        width: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .facilities-hero__title {
+        font-size: var(--font-size-lg);
+    }
+
+    .facilities-hero__image {
+        height: 280px;
+    }
+
+    .facilities-hero__features {
+        gap: var(--space-3);
+    }
+
+    .facilities-hero__feature {
+        gap: var(--space-3);
+    }
+
+    .facilities-hero__feature-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .facilities-hero__image::before {
+        width: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .facilities-hero__container {
+        gap: var(--space-16);
+    }
+
+    .facilities-hero__title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .facilities-hero__image {
+        height: 550px;
+    }
+}

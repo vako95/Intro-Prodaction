@@ -1,0 +1,44 @@
+.news-feed__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .news-feed__list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .news-feed__list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .news-feed__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .news-feed__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 19px;
+    }
+}

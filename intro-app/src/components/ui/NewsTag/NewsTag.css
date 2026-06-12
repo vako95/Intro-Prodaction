@@ -1,0 +1,137 @@
+.news-tag {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 4px;
+    padding: 32px 16px;
+}
+
+.news-tag__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.news-tag__heading-title {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(170, 132, 83, 1);
+    margin-bottom: 16px;
+}
+
+.news-tag__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.news-tag__item {
+    flex: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.news-tag__item-link {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    border-radius: 8px;
+    background-color: rgba(46, 41, 41, 0.25);
+    text-decoration: none;
+    border-radius: 16px;
+    transition: color 250ms linear;
+    padding: 8px 32px;
+}
+
+.news-tag__item-link:hover {
+    color: rgba(170, 132, 83, 1);
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .news-tag {
+        padding: 28px 14px;
+    }
+
+    .news-tag__heading {
+        margin-bottom: 28px;
+    }
+
+    .news-tag__heading-title {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .news-tag__list {
+        gap: 14px;
+    }
+
+    .news-tag__item-link {
+        font-size: 15px;
+        padding: 7px 28px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .news-tag {
+        padding: 24px 12px;
+    }
+
+    .news-tag__heading {
+        margin-bottom: 24px;
+    }
+
+    .news-tag__heading-title {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+    }
+
+    .news-tag__list {
+        gap: 12px;
+    }
+
+    .news-tag__item-link {
+        font-size: 14px;
+        padding: 6px 24px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .news-tag {
+        padding: 20px 10px;
+    }
+
+    .news-tag__heading-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .news-tag__list {
+        gap: 10px;
+    }
+
+    .news-tag__item-link {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+}

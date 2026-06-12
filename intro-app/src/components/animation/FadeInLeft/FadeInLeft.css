@@ -1,0 +1,39 @@
+.fade__in-left {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    will-change: transform, opacity;
+}
+
+
+.fade__in-left {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    will-change: transform, opacity;
+}
+
+/* Laptop */
+@media (max-width: 1024px) {}
+
+/* Tablet */
+@media (max-width: 768px) {}
+
+/* Mobile */
+@media (max-width: 480px) {}
+
+/* Small mobile */
+@media (max-width: 360px) {
+    .fade__in-left {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .decorated-heading__content {
+        justify-content: flex-start;
+    }
+}

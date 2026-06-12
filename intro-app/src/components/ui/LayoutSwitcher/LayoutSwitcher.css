@@ -1,0 +1,125 @@
+.layout-switcher {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.247);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+
+}
+
+.layout-switcher__btn {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    /* border: none;
+    outline: none; */
+    border: transparent solid 1px;
+
+    padding: 8px 16px;
+    transition: all 3s ease;
+    /* background-color: brown; */
+    /* padding: 8px; */
+}
+
+
+.layout-switcher__btn:nth-child(2) {
+    border-left: 1px solid rgba(167, 155, 155, 0.255);
+    border-right: 1px solid rgba(167, 155, 155, 0.255);
+}
+
+.layout-switcher__btn:not(:last-of-type) {
+    margin-right: 8px;
+}
+
+.layout-switcher__btn.active .layout-switcher__icon {
+    color: orange;
+    /* border: 1px solid orange; */
+}
+
+.layout-switcher__icon {
+    font-size: 16px;
+    display: flex;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    transition: color 150ms linear;
+}
+
+.layout-switcher__btn:hover {
+    cursor: pointer;
+}
+
+.layout-switcher__btn:hover .layout-switcher__icon {
+    color: orchid;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .layout-switcher {
+        backdrop-filter: blur(6px);
+    }
+
+    .layout-switcher__btn {
+        padding: 7px 14px;
+    }
+
+    .layout-switcher__btn:not(:last-of-type) {
+        margin-right: 6px;
+    }
+
+    .layout-switcher__icon {
+        font-size: 15px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .layout-switcher {
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+    }
+
+    .layout-switcher__btn {
+        padding: 6px 12px;
+    }
+
+    .layout-switcher__btn:not(:last-of-type) {
+        margin-right: 5px;
+    }
+
+    .layout-switcher__icon {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .layout-switcher {
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+    }
+
+    .layout-switcher__btn {
+        padding: 5px 10px;
+    }
+
+    .layout-switcher__btn:not(:last-of-type) {
+        margin-right: 4px;
+    }
+
+    .layout-switcher__icon {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,202 @@
+.custom-months-dropdown {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-months-dropdown__toggle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(20, 18, 18);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+}
+
+
+.custom-months-dropdown__toggle-value {
+    font-family: inherit;
+    font-size: 16px;
+    color: inherit;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+
+.custom-months-dropdown__toggle-icon {
+    font-size: 16px;
+    font-weight: 500;
+    color: inherit;
+    display: inline-flex;
+    display: flex;
+    color: rgba(170, 132, 83);
+    transform-origin: top center;
+}
+
+.custom-months-dropdown__toggle-icon--open {
+    color: rgba(170, 132, 83, 0.489);
+}
+
+
+.custom-months-dropdown__content {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    min-width: 120px;
+    height: auto;
+    max-height: 200px;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(170, 132, 83, 0.5);
+    border-radius: 4px;
+    padding: 4px;
+    z-index: 99999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.custom-months-dropdown__content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-months-dropdown__content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.custom-months-dropdown__content::-webkit-scrollbar-thumb {
+    background: rgba(170, 132, 83, 0.6);
+    border-radius: 3px;
+}
+
+.custom-months-dropdown__content::-webkit-scrollbar-thumb:hover {
+    background: rgba(170, 132, 83, 0.8);
+}
+
+.custom-months-dropdown__content-item {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    color: inherit;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: all 150ms ease;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.custom-months-dropdown__content-item:not(:last-of-type) {
+    margin-bottom: 3px;
+}
+.custom-years-dropdown__content-item{
+    font-size: 10px;
+}
+.custom-months-dropdown__content-item:hover {
+    background-color: rgba(170, 132, 83);
+    color: black;
+}
+
+.custom-months-dropdown__content-item:disabled {
+    background-color: rgba(255, 255, 255, 0.247);
+    color: rgba(254, 254, 254, 0.598);
+    cursor: not-allowed;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .custom-months-dropdown__toggle {
+        padding: 3px 6px;
+    }
+
+    .custom-months-dropdown__toggle-value {
+        font-size: 13px;
+    }
+
+    .custom-months-dropdown__toggle-icon {
+        font-size: 13px;
+    }
+
+    .custom-months-dropdown__content {
+        font-size: 10px;
+        padding: 3px 6px;
+        
+    }
+    .custom-years-dropdown__content-item{
+    font-size: 10px !important;
+}
+.custom-years-dropdown__toggle-value{
+    font-size: 12px !important;
+}
+.custom-months-dropdown__toggle-value{
+        font-size: 12px !important;
+}
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .custom-months-dropdown__toggle-value {
+        font-size: 14px;
+    }
+
+    .custom-months-dropdown__toggle-icon {
+        font-size: 14px;
+    }
+
+    .custom-months-dropdown__content {
+        font-size: 10px !important;
+    }
+    .custom-years-dropdown__toggle-value{
+    font-size: 12px !important;
+}
+.custom-months-dropdown__toggle-value{
+        font-size: 12px !important;
+}
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .custom-months-dropdown__toggle-value {
+        font-size: 15px;
+    }
+
+    .custom-months-dropdown__toggle-icon {
+        font-size: 15px;
+    }
+
+    .custom-months-dropdown__content {
+        font-size: 10px;
+    }
+    .custom-years-dropdown__content-item{
+    font-size: 10px;
+}
+.custom-years-dropdown__toggle-value{
+    font-size: 12px !important;
+}
+.custom-months-dropdown__toggle-value{
+        font-size: 12px !important;
+}
+}

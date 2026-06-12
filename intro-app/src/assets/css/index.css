@@ -1,0 +1,223 @@
+/**
+ * ============================================
+ * MAIN STYLESHEET
+ * Enterprise-Level CSS Architecture
+ * ============================================
+ * 
+ * Import order is critical for proper cascade
+ */
+
+/* ========================================
+   EXTERNAL FONTS & ICONS
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
+@import "@flaticon/flaticon-uicons/css/all/all";
+@import "flag-icons/css/flag-icons.min.css";
+
+/* ========================================
+   CORE SYSTEM (Order matters!)
+   ======================================== */
+@import "./core/variables.css";    /* Design tokens first */
+@import "./core/reset.css";        /* Reset & normalize */
+@import "./core/responsive.css";   /* Responsive utilities */
+
+/* ========================================
+   LEGACY COMPATIBILITY
+   ======================================== */
+/* Keep for backward compatibility with existing components */
+body {
+    font-family: "Inter", "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#root{
+    overflow-x:hidden;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+/* GPU acceleration for smooth animations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* Contain layout shifts */
+.contain-layout {
+    contain: layout;
+}
+
+.contain-paint {
+    contain: paint;
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: var(--space-4);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    z-index: var(--z-index-max);
+    transition: top var(--transition-fast) var(--ease-out);
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* Focus visible enhancement */
+.focus-ring:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-base);
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--color-gray-800) 0%,
+        var(--color-gray-700) 50%,
+        var(--color-gray-800) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+.transition-all {
+    transition: all var(--transition-base) var(--ease-in-out);
+}
+
+.transition-colors {
+    transition: color var(--transition-base) var(--ease-in-out),
+                background-color var(--transition-base) var(--ease-in-out),
+                border-color var(--transition-base) var(--ease-in-out);
+}
+
+.transition-transform {
+    transition: transform var(--transition-base) var(--ease-in-out);
+}
+
+.transition-opacity {
+    transition: opacity var(--transition-base) var(--ease-in-out);
+}
+
+/* ========================================
+   BACKDROP BLUR UTILITIES
+   ======================================== */
+.backdrop-blur-sm {
+    backdrop-filter: blur(var(--blur-sm));
+    -webkit-backdrop-filter: blur(var(--blur-sm));
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(var(--blur-base));
+    -webkit-backdrop-filter: blur(var(--blur-base));
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+}
+
+.backdrop-blur-lg {
+    backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
+}
+
+/* ========================================
+   GLASS MORPHISM
+   ======================================== */
+.glass {
+    background: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+@media (hover: hover) {
+    .hover-lift:hover {
+        transform: translateY(-2px);
+    }
+    
+    .hover-scale:hover {
+        transform: scale(1.05);
+    }
+    
+    .hover-brightness:hover {
+        filter: brightness(1.1);
+    }
+}
+
+/* ========================================
+   PRINT OPTIMIZATION
+   ======================================== */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

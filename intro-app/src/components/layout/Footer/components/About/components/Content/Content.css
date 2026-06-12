@@ -1,0 +1,60 @@
+.footer__about-content {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.footer__about-content-title {
+    font-family: "Barlow", sans-serif;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+    line-height: 26px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer__about-content {
+        margin-bottom: 14px;
+        justify-content: center;
+    }
+
+    .footer__about-content-title {
+        font-size: 15px;
+        line-height: 24px;
+        max-width: 350px;
+        text-align: center;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer__about-content {
+        margin-bottom: 12px;
+    }
+
+    .footer__about-content-title {
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 300px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .footer__about-content {
+        margin-bottom: 10px;
+    }
+
+    .footer__about-content-title {
+        font-size: 13px;
+        line-height: 20px;
+        max-width: 280px;
+    }
+}

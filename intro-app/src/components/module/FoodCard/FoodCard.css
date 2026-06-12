@@ -1,0 +1,142 @@
+.food-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 64px 0px;
+}
+
+.food-card__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.food-card__heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.food-card__switcher {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.food-card__skeleton {
+    width: 100%;
+    height: 80px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .food-card {
+        padding: 48px 0;
+    }
+
+    .food-card__heading {
+        margin-bottom: 48px;
+        justify-content: flex-start;
+    }
+
+    .food-card__heading>.fade__in-left {
+        width: 0px !important;
+        overflow: hidden;
+    }
+
+    .food-card__heading .fade__in-left>.decorated-heading-cover {
+        display: none !important;
+    }
+
+    .food-card__heading .decorated-heading__container {
+        width: 100%;
+    }
+
+    .food-card__switcher {
+        margin-bottom: 28px;
+    }
+
+    .food-card__skeleton {
+        height: 70px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .food-card {
+        padding: 40px 0;
+    }
+
+    .food-card__heading {
+        width: auto !important;
+        margin-bottom: 40px;
+        justify-content: flex-start;
+    }
+
+    .food-card__heading .fade__in-left>.decorated-heading-cover {
+        display: none !important;
+    }
+
+    .food-card__heading .decorated-heading__container {
+        width: 100%;
+    }
+
+    .food-card__switcher {
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+
+    .food-card__skeleton {
+        height: 60px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .food-card {
+        padding: 32px 0;
+    }
+
+    .food-card__heading {
+        width: auto !important;
+    }
+
+    .food-card__heading {
+        margin-bottom: 32px;
+        justify-content: flex-start;
+    }
+
+    .food-card__heading>.fade__in-left {
+        width: 0px !important;
+        overflow: hidden;
+    }
+
+    .food-card__heading .fade__in-left>.decorated-heading-cover {
+        display: none !important;
+    }
+
+    .food-card__heading .decorated-heading__container {
+        width: 100%;
+    }
+
+    .food-card__skeleton {
+        height: 50px;
+    }
+}

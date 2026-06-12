@@ -1,0 +1,505 @@
+/**
+ * ============================================
+ * RESPONSIVE UTILITIES & MIXINS
+ * Enterprise-Level Responsive Architecture
+ * ============================================
+ * 
+ * Mobile-First responsive utilities following
+ * FAANG-level best practices.
+ */
+
+/* ========================================
+   CONTAINER SYSTEM
+   ======================================== */
+.container-fluid {
+  width: 100%;
+  padding-inline: var(--space-4);
+  margin-inline: auto;
+}
+
+.container {
+  width: 100%;
+  padding-inline: var(--space-4);
+  margin-inline: auto;
+}
+
+/* Mobile First - Base (320px+) */
+@media (min-width: 320px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Small devices (480px+) */
+@media (min-width: 480px) {
+  .container {
+    max-width: 30rem; /* 480px */
+    padding-inline: var(--space-5);
+  }
+}
+
+/* Tablets (768px+) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 45rem; /* 720px */
+    padding-inline: var(--space-6);
+  }
+}
+
+/* Large tablets (1024px+) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 60rem; /* 960px */
+    padding-inline: var(--space-8);
+  }
+}
+
+/* Desktop (1280px+) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 71.25rem; /* 1140px */
+  }
+}
+
+/* Large desktop (1536px+) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 82.5rem; /* 1320px */
+  }
+}
+
+/* ========================================
+   RESPONSIVE DISPLAY UTILITIES
+   ======================================== */
+/* Hide on mobile */
+.hidden-xs {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .hidden-xs {
+    display: initial;
+  }
+}
+
+/* Hide on small devices */
+.hidden-sm {
+  display: initial;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+/* Hide on tablets */
+.hidden-md {
+  display: initial;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+/* Hide on desktop */
+.hidden-lg {
+  display: initial;
+}
+
+@media (min-width: 1024px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+/* Show only on mobile */
+.visible-xs {
+  display: initial;
+}
+
+@media (min-width: 480px) {
+  .visible-xs {
+    display: none;
+  }
+}
+
+/* Show only on tablets */
+.visible-md {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .visible-md {
+    display: initial;
+  }
+}
+
+/* Show only on desktop */
+.visible-lg {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .visible-lg {
+    display: initial;
+  }
+}
+
+/* ========================================
+   RESPONSIVE GRID SYSTEM
+   ======================================== */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 480px) {
+  .grid-cols-sm-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-cols-md-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-md-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .grid-cols-md-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-lg-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .grid-cols-lg-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .grid-cols-lg-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ========================================
+   RESPONSIVE FLEXBOX UTILITIES
+   ======================================== */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  .flex-md-row {
+    flex-direction: row;
+  }
+  
+  .flex-md-col {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex-lg-row {
+    flex-direction: row;
+  }
+  
+  .flex-lg-col {
+    flex-direction: column;
+  }
+}
+
+/* ========================================
+   RESPONSIVE SPACING
+   ======================================== */
+/* Padding utilities */
+.p-responsive {
+  padding: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .p-responsive {
+    padding: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-responsive {
+    padding: var(--space-8);
+  }
+}
+
+/* Margin utilities */
+.m-responsive {
+  margin: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .m-responsive {
+    margin: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-responsive {
+    margin: var(--space-8);
+  }
+}
+
+/* Gap utilities */
+.gap-responsive {
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .gap-responsive {
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-responsive {
+    gap: var(--space-8);
+  }
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+.text-responsive-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-responsive-base {
+  font-size: var(--font-size-base);
+}
+
+.text-responsive-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-responsive-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-responsive-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.text-responsive-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+/* ========================================
+   RESPONSIVE IMAGES
+   ======================================== */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ========================================
+   ASPECT RATIO UTILITIES
+   ======================================== */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+/* ========================================
+   RESPONSIVE WIDTH UTILITIES
+   ======================================== */
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* ========================================
+   TOUCH TARGET UTILITIES (Accessibility)
+   ======================================== */
+.touch-target {
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+}
+
+.touch-target-comfortable {
+  min-width: var(--touch-target-comfortable);
+  min-height: var(--touch-target-comfortable);
+}
+
+/* ========================================
+   RESPONSIVE OVERFLOW
+   ======================================== */
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.overflow-y-auto {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Smooth scrolling for overflow containers */
+.overflow-smooth {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   RESPONSIVE POSITION UTILITIES
+   ======================================== */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-index-fixed);
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-index-fixed);
+}
+
+/* ========================================
+   SAFE AREA UTILITIES (Mobile Notches)
+   ======================================== */
+.safe-area-inset-top {
+  padding-top: max(var(--space-4), var(--safe-area-inset-top));
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: max(var(--space-4), var(--safe-area-inset-bottom));
+}
+
+.safe-area-inset-left {
+  padding-left: max(var(--space-4), var(--safe-area-inset-left));
+}
+
+.safe-area-inset-right {
+  padding-right: max(var(--space-4), var(--safe-area-inset-right));
+}
+
+/* ========================================
+   RESPONSIVE TEXT ALIGNMENT
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left;
+  }
+  
+  .text-md-center {
+    text-align: center;
+  }
+  
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+/* ========================================
+   RESPONSIVE BORDER RADIUS
+   ======================================== */
+.rounded-responsive {
+  border-radius: var(--radius-base);
+}
+
+@media (min-width: 768px) {
+  .rounded-responsive {
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rounded-responsive {
+    border-radius: var(--radius-lg);
+  }
+}

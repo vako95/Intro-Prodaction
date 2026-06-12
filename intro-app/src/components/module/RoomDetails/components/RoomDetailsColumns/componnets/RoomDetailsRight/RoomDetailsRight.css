@@ -1,0 +1,255 @@
+.rooms-details__table {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms-details__table-item {
+    width: 90%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.242);
+}
+
+
+/* Pricing Section */
+.rooms-details__pricing {
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.rooms-details__pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.rooms-details__pricing-label {
+    font-weight: 400;
+}
+
+.rooms-details__pricing-value {
+    font-weight: 600;
+    color: #fff;
+}
+
+.rooms-details__pricing-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+.rooms-details__pricing-item--total {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.rooms-details__pricing-item--discount {
+    color: #4ade80;
+}
+
+.rooms-details__pricing-item--discount .rooms-details__pricing-value {
+    color: #4ade80;
+}
+
+.rooms-details__pricing-item--final {
+    font-size: 18px;
+    font-weight: 700;
+    color: #d4af37;
+    padding-top: 15px;
+}
+
+.rooms-details__pricing-item--final .rooms-details__pricing-value {
+    color: #d4af37;
+}
+
+
+.room__details-form-coupon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+.room__details-form-coupon__btn{
+    width: 100%;
+}
+
+.room__details-form-coupon-input {
+    flex: 1;
+}
+.room__details-form-coupon-input>.input__label{
+    white-space: nowrap;
+}
+.room__details-form-error {
+    padding: 10px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 6px;
+    color: #ef4444;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.room__details-form-success {
+    padding: 10px;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 6px;
+    color: #4ade80;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.room__details-form-action {
+    margin-top: 20px;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .rooms-details__table-item {
+        width: 100%;
+    }
+
+    .rooms-details__pricing {
+        padding: 14px;
+        margin: 14px 0;
+    }
+
+    .rooms-details__pricing-item {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .rooms-details__pricing-item--total {
+        font-size: 14px;
+    }
+
+    .rooms-details__pricing-item--final {
+        font-size: 15px;
+        padding-top: 12px;
+    }
+
+    .room__details-form-coupon {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .room__details-form-coupon button {
+        width: 100%;
+    }
+
+    .room__details-form-error,
+    .room__details-form-success {
+        padding: 8px;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .room__details-form-action {
+        margin-top: 16px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .rooms-details__table-item {
+        width: 95%;
+    }
+
+    .rooms-details__pricing {
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    .rooms-details__pricing-item {
+        padding: 9px 0;
+        font-size: 13px;
+    }
+
+    .rooms-details__pricing-item--total {
+        font-size: 15px;
+    }
+
+    .rooms-details__pricing-item--final {
+        font-size: 16px;
+        padding-top: 13px;
+    }
+
+    .room__details-form-coupon {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .room__details-form-coupon button {
+        width: 100%;
+    }
+
+    .room__details-form-error,
+    .room__details-form-success {
+        padding: 9px;
+        font-size: 13px;
+        margin-bottom: 13px;
+    }
+
+    .room__details-form-action {
+        margin-top: 18px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .rooms-details__pricing {
+        padding: 18px;
+        margin: 18px 0;
+    }
+
+    .rooms-details__pricing-item--total {
+        font-size: 15px;
+    }
+
+    .rooms-details__pricing-item--final {
+        font-size: 17px;
+        padding-top: 14px;
+    }
+
+    .room__details-form-coupon {
+        gap: 10px;
+    }
+
+    .room__details-form-coupon button {
+        width: 100%;
+    }
+
+    .room__details-form-error,
+    .room__details-form-success {
+        margin-bottom: 14px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .rooms-details__pricing {
+        padding: 19px;
+        margin: 19px 0;
+    }
+
+    .rooms-details__pricing-item--final {
+        padding-top: 14px;
+    }
+}

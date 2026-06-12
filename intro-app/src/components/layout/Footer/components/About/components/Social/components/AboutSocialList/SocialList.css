@@ -1,0 +1,36 @@
+.footer__about-social-links {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .footer__about-social-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer__about-social-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer__about-social-links {
+        justify-content: center;
+    }
+}

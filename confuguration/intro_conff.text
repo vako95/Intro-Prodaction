@@ -1,0 +1,73 @@
+# intro-app
+
+intro-app@0.0.0
+├── @emotion/styled@11.14.1
+├── @eslint/js@9.39.1
+├── @flaticon/flaticon-uicons@3.3.1
+├── @mui/x-date-pickers@8.17.0
+├── @reactuses/core@6.1.5
+├── @reduxjs/toolkit@2.10.1
+├── @stripe/react-stripe-js@6.3.0
+├── @stripe/stripe-js@9.4.0
+├── @tanstack/eslint-plugin-query@5.91.2
+├── @tanstack/react-query-devtools@5.91.1
+├── @tanstack/react-query@5.90.11
+├── @types/react-dom@19.2.2
+├── @types/react@19.2.2
+├── @vitejs/plugin-react-swc@4.2.1
+├── autoplay@0.0.4
+├── axios@1.13.2
+├── clsx@2.1.1
+├── dayjs@1.11.19
+├── eslint-plugin-react-hooks@5.2.0
+├── eslint-plugin-react-refresh@0.4.24
+├── eslint@9.39.1
+├── flag-icons@7.5.0
+├── formik@2.4.8
+├── framer-motion@12.23.24
+├── fullscreen@1.1.1
+├── globals@16.5.0
+├── lightgallery@2.9.0
+├── maplibre-gl@5.11.0
+├── react-day-picker@9.11.1
+├── react-dom@19.2.0
+├── react-icons@5.5.0
+├── react-redux@9.2.0
+├── react-router-dom@7.9.5
+├── react-timer-hook@4.0.5
+├── react-tooltip@5.30.0
+├── react@19.2.0
+├── share@0.7.40
+├── swiper@11.2.10
+├── vite@7.2.2
+├── wowjs@1.1.3
+├── yet-another-react-lightbox@3.25.0
+└── yup@1.7.1
+
+#server
+
+asgiref==3.11.0
+certifi==2026.4.22
+charset-normalizer==3.4.7
+Django==6.0
+django-appconf==1.2.0
+django-ckeditor==6.7.3
+django-cors-headers==4.9.0
+django-filter==25.2
+django-imagekit==6.1.0
+django-js-asset==3.1.2
+django-parler==2.3
+djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
+idna==3.13
+pilkit==3.0
+pillow==12.2.0
+psycopg2-binary==2.9.12
+PyJWT==2.10.1
+python-dotenv==1.2.2
+requests==2.33.1
+sqlparse==0.5.4
+stripe==15.1.0
+typing_extensions==4.15.0
+tzdata==2025.2
+urllib3==2.7.0

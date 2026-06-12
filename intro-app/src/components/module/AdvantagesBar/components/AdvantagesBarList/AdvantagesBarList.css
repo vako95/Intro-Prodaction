@@ -1,0 +1,44 @@
+.advantages-bar__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .advantages-bar__list {
+       grid-template-columns: repeat(1, 1fr) !important;
+        gap: 12px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .advantages-bar__list {
+grid-template-columns: repeat(1, 1fr) !important;
+        gap: 14px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .advantages-bar__list {
+       grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .advantages-bar__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}

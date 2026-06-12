@@ -1,0 +1,311 @@
+.footer__subscribe-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__subscribe-form-group {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.footer__subscribe-email {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 16px;
+}
+
+.footer__subscribe-email-field {
+    font-family: "Barlow", sans-serif;
+    width: 100%;
+    min-width: 192px;
+    max-width: 320px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: rgb(173, 173, 173);
+    padding: 22px;
+}
+
+.footer__subscribe-email-button {
+    position: relative;
+    padding: 0px 26px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.footer__subscribe-email-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.footer__subscribe-email-button:hover::before {
+    left: 100%;
+}
+
+.footer__subscribe-email-button:hover {
+    background: linear-gradient(135deg, rgba(190, 152, 103, 1) 0%, rgba(210, 172, 123, 1) 100%);
+    border-color: rgba(190, 152, 103, 1);
+    box-shadow: 0 4px 20px rgba(170, 132, 83, 0.4);
+    transform: translateY(-2px);
+}
+
+.footer__subscribe-email-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(170, 132, 83, 0.3);
+}
+
+.footer__subscribe-email-button:focus-visible {
+    outline: 2px solid rgba(170, 132, 83, 1);
+    outline-offset: 3px;
+}
+
+.footer__subscribe-email-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.footer__subscribe-email-button:disabled:hover {
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    box-shadow: none;
+    transform: none;
+}
+
+.footer__subscribe-email-button i {
+    display: flex;
+    font-size: 22px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.footer__subscribe-email-button:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.footer__subscribe-email-button:active i {
+    transform: scale(0.95);
+}
+
+.footer__subscribe-checkbox {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+
+.footer__subscribe-message {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out;
+}
+
+.footer__subscribe-message--success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.footer__subscribe-message--error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ri-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .footer__subscribe-email-button,
+    .footer__subscribe-email-button i,
+    .footer__subscribe-email-button::before {
+        transition: none;
+        animation: none;
+    }
+    
+    .footer__subscribe-email-button:hover {
+        transform: none;
+    }
+    
+    .footer__subscribe-email-button:hover i {
+        transform: none;
+    }
+    
+    .ri-spin {
+        animation: none;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .footer__subscribe-email {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .footer__subscribe-email-field {
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .footer__subscribe-email-button {
+        width: 100%;
+        padding: 16px;
+        justify-content: center;
+    }
+
+    .footer__subscribe-email-button i {
+        font-size: 18px;
+    }
+    
+    .footer__subscribe-email-button:hover {
+        transform: translateY(-1px);
+    }
+
+    .footer__subscribe-message {
+        max-width: 100%;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer__subscribe-email {
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .footer__subscribe-email-field {
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        padding: 18px;
+    }
+
+    .footer__subscribe-email-button {
+        width: 100%;
+        padding: 18px;
+        justify-content: center;
+    }
+
+    .footer__subscribe-email-button i {
+        font-size: 20px;
+    }
+    
+    .footer__subscribe-email-button:hover {
+        transform: translateY(-1px);
+    }
+
+    .footer__subscribe-message {
+        max-width: 100%;
+        font-size: 13px;
+        padding: 11px 14px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer__subscribe-email {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .footer__subscribe-email-field {
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    .footer__subscribe-email-button {
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .footer__subscribe-email-button i {
+        font-size: 21px;
+    }
+    
+    .footer__subscribe-email-button:hover {
+        transform: translateY(-1px);
+    }
+
+    .footer__subscribe-message {
+        max-width: 100%;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .footer__subscribe-email-field {
+        min-width: 180px;
+        max-width: 280px;
+    }
+}

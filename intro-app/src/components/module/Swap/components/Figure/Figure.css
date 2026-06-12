@@ -1,0 +1,93 @@
+.swap__figure {
+    position: relative;
+    top: -50px;
+    width: auto;
+    height: auto;
+    display: flex;
+    z-index: 2;
+}
+
+
+
+.swap__figure-wrapper {
+    width: 508px;
+    height: max-content;
+    min-height: 387px;
+
+    display: flex;
+}
+
+.swap__figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .swap__figure {
+        height: 350px;
+        top: -20px;
+    }
+    
+
+    .swap__figure-wrapper {
+        width: 100%;
+        max-width: 280px;
+        min-height: 200px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .swap__figure {
+        top: -25px;
+    }
+
+    .swap__figure-wrapper {
+        width: 100%;
+        max-width: 340px;
+        min-height: 240px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .swap__figure {
+        top: -30px;
+    }
+
+    .swap__figure-wrapper {
+        width: 100%;
+        max-width: 400px;
+        min-height: 280px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .swap__figure {
+        top: -35px;
+           
+    }
+
+    .swap__figure-wrapper {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* Medium Desktops (1200px and below) */
+@media (max-width: 1200px) {
+    /* .swap__figure {
+        top: -40px;
+    } */
+
+ 
+}

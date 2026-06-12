@@ -1,0 +1,44 @@
+.frosted-glass {
+    width: 100%;
+    height: auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(0.5px);
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .frosted-glass {
+        padding: 16px;
+        padding-top: 0px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .frosted-glass {
+        padding: 12px;
+        padding-top: 0px;
+        backdrop-filter: blur(0.3px);
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .frosted-glass {
+        padding: 10px;
+        padding-top: 0px;
+        backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}

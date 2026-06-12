@@ -1,0 +1,115 @@
+.services {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(20, 18, 18);
+    position: relative;
+    inset: 0;
+    padding: 80px 0px;
+}
+
+.services__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.services__section:first-child {
+    flex: 0 0 42%;
+    min-width: 300px;
+}
+
+.services__section:last-child {
+    flex: 0 0 42%;
+    min-width: 300px;
+}
+
+.services__section {
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.service-skeleton {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-skeleton__hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.services-skeleton__hero-icon {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+}
+
+.services-skeleton__hero-card {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+#services-skeleton__hero-card-wrapper {
+    width: 250px;
+    height: 250px;
+}
+
+#services-skeleton__hero-wrapper {
+    width: 500px;
+    height: 500px;
+}
+
+#services-skeleton__hero-icon-wrapper {
+    width: 200px;
+    height: 200px;
+}
+
+.services-skeleton__future {
+    width: 100%;
+    height: auto;
+
+
+}
+
+#services-skeleton__future-wrapper {
+    width: 500px;
+    height: 100px;
+}
+
+#services-skeleton__future-wrapper:first-child {
+    height: 50px;
+}
+
+#services-skeleton__future-wrapper:nth-of-type(2),
+#services-skeleton__future-wrapper:nth-of-type(4) {
+    height: 150px;
+}
+
+
+
+#services-skeleton__future-wrapper:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+

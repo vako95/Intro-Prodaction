@@ -1,0 +1,64 @@
+.news__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+    isolation: isolate;
+}
+
+.news__item-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.news__item-backdrop-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(170, 132, 83, 1);
+    overflow: hidden;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Desktop Large (1440px+) */
+@media (min-width: 1440px) {
+    .news__item {
+        min-height: 440px;
+    }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .news__item {
+        min-height: 420px;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .news__item {
+        min-height: 380px;
+    }
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 767px) {
+    .news__item {
+        min-height: 340px;
+    }
+}
+
+/* Small Mobile (360px - 479px) */
+@media (max-width: 479px) {
+    .news__item {
+        min-height: 320px;
+    }
+}

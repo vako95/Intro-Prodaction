@@ -1,0 +1,114 @@
+/* .slider-cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.slider__container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.slider-cube__swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: transparent !important;
+}
+
+.slider-cube__swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider-cube__swiper .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+
+.slider-cube__swiper .swiper-slide-next {
+    opacity: 0;
+}
+
+
+.slider-cube__swiper .swiper-pagination {
+    text-align: end !important;
+}
+
+.slider-cube__swiper .swiper-pagination-horizontal {
+    left: -100px !important;
+}
+
+.slider-cube__swiper .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: rgb(34, 34, 34) !important;
+}
+
+.slider-cube__swiper .swiper-pagination-bullet {
+    background-color: rgba(250, 250, 250, 0.6) !important;
+    width: 12px;
+    height: 12px;
+    opacity: 0.6;
+    margin: 0 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-cube__swiper .swiper-pagination-bullet-active {
+    background-color: rgb(34, 34, 34) !important;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.slider-cube__swiper .swiper-pagination-bullet:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+} */
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Note: SliderCube is currently commented out in the CSS.
+   If it gets uncommented, these responsive styles will apply. */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    /* Responsive styles ready for when component is active */
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    /* Responsive styles ready for when component is active */
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    /* Responsive styles ready for when component is active */
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    /* Responsive styles ready for when component is active */
+}

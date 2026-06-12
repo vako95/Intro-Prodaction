@@ -1,0 +1,6 @@
+#result_list th,
+#result_list td {
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: 1.4;
+}

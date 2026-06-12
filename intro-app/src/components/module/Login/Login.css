@@ -1,0 +1,219 @@
+.login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1rem;
+    padding: 40px;
+
+}
+
+.login__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.login__heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 3rem;
+    color: rgba(170, 132, 83);
+    font-weight: 400;
+}
+
+.login__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgba(255, 255, 255);
+    gap: 16px;
+}
+
+.login__form-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.login__form-field {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.input__field:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: rgba(255, 255, 255) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.login__form-icon {
+    display: flex;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+
+
+.login__form-input {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    border: none;
+    color: rgba(255, 255, 255);
+    outline: none;
+    background-color: transparent;
+}
+
+.login__form-control {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.login__form-control-action {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form-meta-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .login {
+        padding: 32px 24px;
+    }
+
+    .login__heading {
+        margin-bottom: 28px;
+    }
+
+    .login__heading-title {
+        font-size: 2.5rem;
+    }
+
+    .login__form {
+        gap: 14px;
+    }
+
+    .login__form-content {
+        gap: 14px;
+    }
+
+    .login__form-field {
+        gap: 14px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .login {
+        padding: 20px 16px;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .login__heading {
+        margin-bottom: 20px;
+    }
+
+    .login__heading-title {
+        font-size: 2rem;
+    }
+
+    .login__form {
+        gap: 12px;
+        height: auto;
+    }
+
+    .login__form-content {
+        gap: 12px;
+    }
+
+    .login__form-field {
+        gap: 12px;
+    }
+
+    .login__form-control {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .login__form-control-action {
+        width: 100%;
+    }
+
+    .login__form-icon {
+        font-size: 18px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .login {
+        padding: 16px 12px;
+        height: 100%;
+
+    }
+
+    .login__heading {
+        margin-bottom: 16px;
+    }
+
+    .login__heading-title {
+        font-size: 1.75rem;
+    }
+
+    .login__form {
+        gap: 10px;
+        height: auto;
+    }
+
+    .login__form-content {
+        gap: 10px;
+    }
+
+    .login__form-field {
+        gap: 10px;
+    }
+}

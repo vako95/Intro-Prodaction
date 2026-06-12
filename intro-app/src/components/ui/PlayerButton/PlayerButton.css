@@ -1,0 +1,202 @@
+.player__button {
+    font-family: 'Barlow', sans-serif;
+    width: auto;
+    height: auto;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aa8453;
+    color: #FFFFFF;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms linear, color 250ms linear;
+    z-index: 2;
+
+}
+
+.player__button--round {
+    position: relative;
+    border-radius: 50%;
+    background-color: rgba(170, 132, 83, 0.5);
+    filter: brightness(1.5);
+    animation: pulse 1.5s infinite ease-out;
+
+}
+
+.player__button--round::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(170, 132, 83, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 1.8s infinite linear;
+    box-shadow: 0 0 20px rgba(170, 132, 83, 0.5);
+    z-index: 0;
+}
+
+.player__button--round:hover::after {
+    animation: ripple 1s infinite linear;
+}
+
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.6;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+
+.player__button--sm {
+    font-size: 44px;
+    font-weight: 600;
+    padding: 18px 40px;
+}
+
+.player__button--md {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 42px;
+}
+
+.player__button--lg {
+    min-width: 136px;
+    min-height: 136px;
+    font-size: 36px;
+    font-weight: 600;
+    /* padding: 42px; */
+    /* padding: 18px 100px; */
+}
+
+.player__button-icon {
+    display: flex;
+    z-index: 9999;
+    opacity: 1;
+}
+
+.player__button-gold:hover {
+    color: white;
+}
+
+
+
+.player__button-gold::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #222222;
+    color: #FFFFFF;
+    z-index: -1;
+    transition: width 300ms linear, right 300ms linear, left 300ms linear;
+}
+
+.player__button-gold:hover::before {
+    width: 100%;
+    left: 0;
+    right: unset;
+}
+
+
+
+.player__button-white:hover {
+    background-color: #fff;
+    color: #aa8453;
+}
+
+.player__button-green:hover {
+    background-color: #8ff90e;
+    color: #aa8453;
+    transition: background-color 100ms linear, color 100ms linear;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .player__button--sm {
+        font-size: 38px;
+        padding: 16px 35px;
+    }
+
+    .player__button--md {
+        font-size: 24px;
+        padding: 36px;
+    }
+
+    .player__button--lg {
+        min-width: 120px;
+        min-height: 120px;
+        font-size: 32px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .player__button--sm {
+        font-size: 32px;
+        padding: 14px 30px;
+    }
+
+    .player__button--md {
+        font-size: 22px;
+        padding: 32px;
+    }
+
+    .player__button--lg {
+        min-width: 100px;
+        min-height: 100px;
+        font-size: 28px;
+    }
+
+    .player__button--round {
+        animation: pulse 2s infinite ease-out;
+    }
+
+    .player__button--round::after {
+        animation: ripple 2.2s infinite linear;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .player__button--sm {
+        font-size: 28px;
+        padding: 12px 25px;
+    }
+
+    .player__button--md {
+        font-size: 20px;
+        padding: 28px;
+    }
+
+    .player__button--lg {
+        min-width: 90px;
+        min-height: 90px;
+        font-size: 24px;
+    }
+}

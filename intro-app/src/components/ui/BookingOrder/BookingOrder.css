@@ -1,0 +1,447 @@
+.booking-order {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.booking-order__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.booking-order__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 36px 0px;
+}
+
+.booking-order__heading-title {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 28px;
+    color: rgba(170, 132, 83, 1);
+}
+
+.booking-order__heading-price {
+    font-family: inherit;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.booking-order__base {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px dashed rgba(255, 255, 255, 0.242);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.242);
+    padding: 16px 0px;
+    margin-bottom: 32px;
+}
+
+.booking-order__base-heading {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.booking-order__base-heading-title {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.booking-order__base-heading-icon {
+    color: rgba(170, 132, 83, 1);
+    display: flex;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.booking-order__base-heading--open .booking-order__base-heading-icon,
+.booking-order__base-heading--open .booking-order__base-heading-title {
+    color: rgba(170, 132, 83, 0.568);
+}
+
+.booking-order__base-price {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.568);
+    margin-right: 2px;
+}
+
+
+
+.booking-order__base-tooltip {
+    min-width: 256px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: calc(100% + 22px);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(1px);
+    border-radius: 8px;
+    padding: 32px 16px;
+    z-index: 9999;
+}
+
+.booking-order__base-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #ccc;
+    transform: translateY(-50%);
+}
+
+
+.booking-order__base-tooltip-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+    z-index: 2;
+    margin-bottom: 32px;
+}
+
+
+.booking-order__base-tooltip-heading-title {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: rgba(170, 132, 83, 1);
+}
+
+
+.booking-order__base-tooltip-heading-subtitle {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.booking-order__base-tooltip-heading-count {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 4px;
+}
+
+.booking-order__base-tooltip-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+    margin-bottom: 32px;
+}
+
+.booking-order__base-tooltip-details-date {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(170, 132, 83, 1);
+}
+
+.booking-order__base-tooltip-details-price {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: rgba(255, 255, 255, 1);
+}
+
+.booking-order__base-tooltip-footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.booking-order__base-tooltip-title {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: rgba(170, 132, 83, 1);
+}
+
+.booking-order__base-tooltip-price {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.booking-order__coupon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+
+.booking-order__total {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-order__coupon-input-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.booking-order__total-title {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(170, 132, 83, 1);
+}
+
+.booking-order__total-price {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .booking-order__heading {
+        padding: 30px 0px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .booking-order__heading-title {
+        font-size: 24px;
+    }
+
+    .booking-order__heading-price {
+        font-size: 20px;
+    }
+
+    .booking-order__base {
+        padding: 14px 0px;
+        margin-bottom: 28px;
+    }
+
+    .booking-order__base-heading-title,
+    .booking-order__base-price {
+        font-size: 15px;
+    }
+
+    .booking-order__base-tooltip {
+        min-width: 220px;
+        padding: 28px 14px;
+        right: calc(100% + 18px);
+    }
+
+    .booking-order__base-tooltip-heading {
+        margin-bottom: 28px;
+    }
+
+    .booking-order__base-tooltip-details {
+        margin-bottom: 28px;
+    }
+
+    .booking-order__coupon {
+        margin-bottom: 14px;
+    }
+
+    .booking-order__coupon-input-wrapper {
+        margin-bottom: 28px;
+    }
+
+    .booking-order__total-title,
+    .booking-order__total-price {
+        font-size: 16px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .booking-order__heading {
+        padding: 24px 0px;
+        gap: 10px;
+    }
+
+    .booking-order__heading-title {
+        font-size: 20px;
+    }
+
+    .booking-order__heading-price {
+        font-size: 18px;
+    }
+
+    .booking-order__base {
+        padding: 12px 0px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .booking-order__base-heading-title,
+    .booking-order__base-price {
+        font-size: 14px;
+    }
+
+    .booking-order__base-tooltip {
+        min-width: 200px;
+        padding: 24px 12px;
+        right: auto;
+        left: 0;
+        top: calc(100% + 10px);
+    }
+
+    .booking-order__base-tooltip::after {
+        top: -6px;
+        left: 20px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 8px solid #ccc;
+        border-top: none;
+        transform: none;
+    }
+
+    .booking-order__base-tooltip-heading {
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .booking-order__base-tooltip-details {
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .booking-order__coupon {
+        margin-bottom: 12px;
+    }
+
+    .booking-order__coupon-input-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .booking-order__total {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .booking-order__total-title,
+    .booking-order__total-price {
+        font-size: 15px;
+    }
+}
+
+/* Small mobile devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .booking-order__heading {
+        padding: 20px 0px;
+        gap: 8px;
+    }
+
+    .booking-order__heading-title {
+        font-size: 18px;
+    }
+
+    .booking-order__heading-price {
+        font-size: 16px;
+    }
+
+    .booking-order__base {
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .booking-order__base-heading-title,
+    .booking-order__base-price {
+        font-size: 13px;
+    }
+
+    .booking-order__base-tooltip {
+        min-width: 180px;
+        padding: 20px 10px;
+    }
+
+    .booking-order__base-tooltip-heading {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .booking-order__base-tooltip-details {
+        margin-bottom: 20px;
+        gap: 5px;
+    }
+
+    .booking-order__coupon-input-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .booking-order__total {
+        gap: 6px;
+    }
+
+    .booking-order__total-title,
+    .booking-order__total-price {
+        font-size: 14px;
+    }
+}

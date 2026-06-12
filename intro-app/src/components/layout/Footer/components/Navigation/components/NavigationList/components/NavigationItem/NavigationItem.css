@@ -1,0 +1,126 @@
+.footer__navigation-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__navigation-item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.footer__navigation-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__navigation-link i,
+.footer__navigation-link .footer__navigation-title {
+    transition: color 100ms linear;
+}
+
+
+.footer__navigation-link:hover i,
+.footer__navigation-link:hover .footer__navigation-link-title {
+    color: rgba(170, 132, 83);
+}
+
+
+.footer__navigation-link-icon {
+    display: flex;
+    font-size: 14px;
+    color: rgb(173, 173, 173);
+    margin-right: 8px;
+
+}
+
+.footer__navigation-link-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(173, 173, 173);
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .footer__navigation-list{
+        width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+    .footer__navigation-item {
+        align-items: center;
+    }
+
+    .footer__navigation-item:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .footer__navigation-link {
+        justify-content: flex-start !important;
+    }
+
+    .footer__navigation-link-icon {
+        font-size: 12px;
+        margin-right: 6px;
+    }
+
+    .footer__navigation-link-title {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+       .footer__navigation-list{
+        width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+    .footer__navigation-item {
+        align-items: center;
+    }
+
+      .footer__navigation-link {
+      justify-content: flex-start !important;
+    }
+
+    .footer__navigation-link-icon {
+        font-size: 13px;
+        margin-right: 7px;
+    }
+
+    .footer__navigation-link-title {
+        font-size: 15px;
+    }
+    .footer__subscribe-email{
+        flex-direction: row !important;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer__navigation-item {
+        align-items: center;
+    }
+
+    .footer__navigation-link {
+        justify-content: center;
+    }
+}

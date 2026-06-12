@@ -1,0 +1,138 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    backdrop-filter: blur(18px);
+    z-index: 9999;
+}
+
+.video-player {
+    display: flex;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+
+.modal--sm .video-player {
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal--md .video-player {
+    width: 80vw;
+}
+
+
+
+/* .video-player__iframe--border {
+    border: 2px blur(8px);
+    border-radius: 8px;
+} */
+.iframe-border {
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #FFFFFF;
+}
+
+.iframe-ambient-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+.iframe {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}
+
+
+
+
+.iframe-zoom {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .video-player {
+        max-width: 700px;
+    }
+
+    .modal--sm .video-player,
+    .modal--md .video-player {
+        width: 90vw;
+    }
+
+    .iframe {
+        border-radius: 10px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .video-player {
+        max-width: 100%;
+        width: 95vw;
+    }
+
+    .modal--sm .video-player,
+    .modal--md .video-player {
+        width: 95vw;
+    }
+
+    .iframe {
+        border-radius: 8px;
+    }
+
+    .iframe-border {
+        border-width: 1px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .video-player {
+        width: 98vw;
+    }
+
+    .modal--sm .video-player,
+    .modal--md .video-player {
+        width: 98vw;
+    }
+
+    .iframe {
+        border-radius: 6px;
+    }
+}

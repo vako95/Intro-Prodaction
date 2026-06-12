@@ -1,0 +1,165 @@
+.cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 777;
+}
+
+.cart__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart__content:hover {
+    transform: translateY(-2px);
+}
+
+.cart__badge {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.cart__badge--with-text {
+    width: auto;
+    gap: 8px;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cart__badge--with-text:hover {
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.25) 0%, rgba(170, 132, 83, 0.15) 100%);
+    border-color: rgba(170, 132, 83, 0.5);
+    box-shadow: 0 4px 12px rgba(170, 132, 83, 0.2);
+}
+
+.cart__badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: rgba(170, 132, 83, 1);
+    transition: all 0.3s ease;
+}
+
+.cart__badge--with-text .cart__badge-icon {
+    font-size: 24px;
+}
+
+.cart__badge-text {
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+}
+
+.cart__content:hover .cart__badge-icon {
+    color: rgba(190, 152, 103, 1);
+    transform: scale(1.1);
+}
+
+.cart__badge-count {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    background: rgba(170, 132, 83, 1);
+    color: #fff;
+    font-family: "Barlow", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes badge-pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cart__panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    pointer-events: auto;
+    z-index: 10001;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .cart__badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cart__badge-icon {
+        font-size: 26px;
+    }
+
+  .cart__badge-count {
+        min-width: 18px;
+        height: 18px;
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart__badge {
+        width: 32px;
+        height: 32px;
+    }
+
+    .cart__badge-icon {
+        font-size: 24px;
+    }
+
+  .cart__badge-count {
+        min-width: 18px;
+        height: 18px;
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .cart__badge {
+        width: 32px;
+        height: 32px;
+    }
+
+    .cart__badge-icon {
+        font-size: 22px;
+    }
+
+    .cart__badge-count {
+        min-width: 18px;
+        height: 18px;
+        font-size: 6px;
+    }
+}

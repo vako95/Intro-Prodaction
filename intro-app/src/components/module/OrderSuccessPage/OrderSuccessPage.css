@@ -1,0 +1,1067 @@
+.order-success {
+    padding: 100px 0 120px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, 
+        rgba(20, 18, 18, 1) 0%, 
+        rgba(34, 34, 34, 1) 50%,
+        rgba(20, 18, 18, 1) 100%
+    );
+    position: relative;
+}
+
+.order-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: radial-gradient(ellipse at top, rgba(170, 132, 83, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.order-success__wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Loading State */
+.order-success__loading {
+    text-align: center;
+    padding: 100px 20px;
+    color: rgba(238, 238, 238, 0.8);
+}
+
+.order-success__spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(170, 132, 83, 0.2);
+    border-top-color: #aa8453;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.order-success__error {
+    text-align: center;
+    padding: 100px 20px;
+    color: rgba(238, 238, 238, 0.9);
+}
+
+.order-success__error-icon {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+.order-success__error h2 {
+    font-family: 'Gilda Display', serif;
+    font-size: 36px;
+    color: rgba(238, 238, 238, 1);
+    margin-bottom: 15px;
+}
+
+.order-success__error p {
+    font-size: 16px;
+    color: rgba(167, 155, 155, 0.8);
+    margin-bottom: 40px;
+}
+
+/* Header */
+.order-success__header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.order-success__icon {
+    font-size: 100px;
+    color: #aa8453;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 30px rgba(170, 132, 83, 0.5));
+    animation: successPulse 2s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes successPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 30px rgba(170, 132, 83, 0.5));
+    }
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 40px rgba(170, 132, 83, 0.7));
+    }
+}
+
+.order-success__title {
+    font-family: 'Gilda Display', serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.order-success__subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: rgba(167, 155, 155, 0.9);
+    margin: 0 0 25px 0;
+    letter-spacing: 0.5px;
+}
+
+.order-success__order-number {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.2) 0%, rgba(190, 152, 103, 0.2) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.4);
+    border-radius: 50px;
+    color: #aa8453;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Content Layout */
+.order-success__content {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Booking Summary */
+.booking-summary {
+    background: linear-gradient(135deg, 
+        rgba(34, 34, 34, 0.95) 0%, 
+        rgba(44, 44, 44, 0.95) 100%
+    );
+    border: 1px solid rgba(170, 132, 83, 0.2);
+    border-radius: 16px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.booking-summary__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(170, 132, 83, 0.2);
+}
+
+.booking-summary__title {
+    font-family: 'Gilda Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge--paid {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(56, 142, 60, 0.2) 100%);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.status-badge--pending {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.2) 0%, rgba(245, 124, 0, 0.2) 100%);
+    color: #ff9800;
+    border: 1px solid rgba(255, 152, 0, 0.4);
+}
+
+/* Booking Items */
+.booking-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.booking-item {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(170, 132, 83, 0.15);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.booking-item:hover {
+    background: rgba(170, 132, 83, 0.05);
+    border-color: rgba(170, 132, 83, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.booking-item__image {
+    position: relative;
+    width: 180px;
+    height: 140px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(170, 132, 83, 0.2);
+}
+
+.booking-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booking-item__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.95) 0%, rgba(190, 152, 103, 0.95) 100%);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.booking-item__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-item__name {
+    font-family: 'Gilda Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.booking-item__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.booking-item__info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: rgba(167, 155, 155, 0.9);
+}
+
+.booking-item__icon {
+    color: #aa8453;
+    font-size: 14px;
+}
+
+.booking-item__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(170, 132, 83, 0.2);
+}
+
+.booking-item__price-label {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: rgba(167, 155, 155, 0.8);
+}
+
+.booking-item__price-total {
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #aa8453;
+}
+
+/* Booking Notes */
+.booking-notes {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(170, 132, 83, 0.1);
+    border-left: 4px solid #aa8453;
+    border-radius: 8px;
+}
+
+.booking-notes__title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #aa8453;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.booking-notes__text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: rgba(167, 155, 155, 0.9);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Sidebar Cards */
+.order-success__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price-card,
+.info-card {
+    background: linear-gradient(135deg, 
+        rgba(34, 34, 34, 0.95) 0%, 
+        rgba(44, 44, 44, 0.95) 100%
+    );
+    border: 1px solid rgba(170, 132, 83, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.price-card__title,
+.info-card__title {
+    font-family: 'Gilda Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(238, 238, 238, 1);
+    margin: 0 0 30px 0;
+    letter-spacing: 0.5px;
+}
+
+.price-card__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-card__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.price-card__label {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: rgba(167, 155, 155, 0.9);
+}
+
+.price-card__value {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(238, 238, 238, 1);
+}
+
+.price-card__row--discount .price-card__value {
+    color: #4caf50;
+}
+
+.price-card__divider {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(170, 132, 83, 0.3) 50%, 
+        transparent 100%
+    );
+    margin: 15px 0;
+}
+
+.price-card__row--total {
+    padding: 20px 0 0 0;
+    border-top: 2px solid rgba(170, 132, 83, 0.3);
+}
+
+.price-card__row--total .price-card__label {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(238, 238, 238, 1);
+}
+
+.price-card__row--total .price-card__value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #aa8453;
+    text-shadow: 0 0 20px rgba(170, 132, 83, 0.4);
+}
+
+.price-card__status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 8px;
+}
+
+.price-card__status-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4caf50;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.price-card__status-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4caf50;
+    margin-bottom: 5px;
+}
+
+.price-card__status-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    color: rgba(167, 155, 155, 0.8);
+}
+
+/* Info Card */
+.info-card__content {
+    margin-bottom: 25px;
+}
+
+.info-card__text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: rgba(167, 155, 155, 0.9);
+    line-height: 1.7;
+    margin: 0 0 15px 0;
+}
+
+.info-card__text:last-child {
+    margin-bottom: 0;
+}
+
+.info-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #aa8453;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.info-card__link:hover {
+    color: #be9867;
+    gap: 15px;
+}
+
+/* Actions */
+.order-success__actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .order-success__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .order-success__sidebar {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .order-success {
+        padding: 80px 0 100px;
+    }
+    
+    .order-success__header {
+        margin-bottom: 60px;
+    }
+    
+    .order-success__icon {
+        font-size: 80px;
+        margin-bottom: 25px;
+    }
+    
+    .order-success__title {
+        font-size: 48px;
+    }
+    
+    .order-success__subtitle {
+        font-size: 17px;
+    }
+    
+    .booking-summary,
+    .price-card,
+    .info-card {
+        padding: 40px 35px;
+    }
+    
+    .booking-summary__title {
+        font-size: 28px;
+    }
+    
+    .booking-item__image {
+        width: 160px;
+        height: 120px;
+    }
+    
+    .booking-item__name {
+        font-size: 22px;
+    }
+    
+    .price-card__title,
+    .info-card__title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-success {
+        padding: 60px 0 80px;
+    }
+    
+    .order-success::before {
+        height: 200px;
+    }
+    
+    .order-success__header {
+        margin-bottom: 50px;
+    }
+    
+    .order-success__icon {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .order-success__title {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+    
+    .order-success__subtitle {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    
+    .order-success__order-number {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+    
+    .order-success__content {
+        gap: 30px;
+    }
+    
+    .booking-summary,
+    .price-card,
+    .info-card {
+        padding: 30px 24px;
+        border-radius: 12px;
+    }
+    
+    .booking-summary__header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .booking-summary__title {
+        font-size: 26px;
+        width: 100%;
+    }
+    
+    .status-badge {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+    
+    .booking-items {
+        gap: 25px;
+    }
+    
+    .booking-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .booking-item__image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .booking-item__badge {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+    
+    .booking-item__name {
+        font-size: 20px;
+    }
+    
+    .booking-item__info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .booking-item__info-row {
+        font-size: 13px;
+    }
+    
+    .booking-item__pricing {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 15px;
+    }
+    
+    .booking-item__price-label {
+        font-size: 13px;
+    }
+    
+    .booking-item__price-total {
+        font-size: 22px;
+    }
+    
+    .booking-notes {
+        padding: 20px;
+        margin-top: 25px;
+    }
+    
+    .booking-notes__title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .booking-notes__text {
+        font-size: 14px;
+    }
+    
+    .order-success__sidebar {
+        gap: 25px;
+    }
+    
+    .price-card__title,
+    .info-card__title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .price-card__rows {
+        gap: 12px;
+    }
+    
+    .price-card__row {
+        padding: 10px 0;
+    }
+    
+    .price-card__label {
+        font-size: 14px;
+    }
+    
+    .price-card__value {
+        font-size: 15px;
+    }
+    
+    .price-card__row--total .price-card__label {
+        font-size: 16px;
+    }
+    
+    .price-card__row--total .price-card__value {
+        font-size: 28px;
+    }
+    
+    .price-card__status {
+        padding: 18px;
+        gap: 12px;
+    }
+    
+    .price-card__status-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .price-card__status-title {
+        font-size: 15px;
+    }
+    
+    .price-card__status-text {
+        font-size: 12px;
+    }
+    
+    .info-card__text {
+        font-size: 14px;
+    }
+    
+    .info-card__link {
+        font-size: 14px;
+    }
+    
+    .order-success__actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .order-success__actions a {
+        width: 100%;
+    }
+    
+    .order-success__actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-success {
+        padding: 50px 0 60px;
+    }
+    
+    .order-success::before {
+        height: 150px;
+    }
+    
+    .order-success__header {
+        margin-bottom: 40px;
+    }
+    
+    .order-success__icon {
+        font-size: 60px;
+        margin-bottom: 18px;
+    }
+    
+    .order-success__title {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+    
+    .order-success__subtitle {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    
+    .order-success__order-number {
+        padding: 9px 20px;
+        font-size: 13px;
+    }
+    
+    .order-success__content {
+        gap: 25px;
+    }
+    
+    .booking-summary,
+    .price-card,
+    .info-card {
+        padding: 24px 18px;
+        border-radius: 10px;
+    }
+    
+    .booking-summary__header {
+        margin-bottom: 25px;
+        padding-bottom: 18px;
+        gap: 12px;
+    }
+    
+    .booking-summary__title {
+        font-size: 24px;
+    }
+    
+    .status-badge {
+        padding: 6px 16px;
+        font-size: 11px;
+    }
+    
+    .booking-items {
+        gap: 20px;
+    }
+    
+    .booking-item {
+        gap: 18px;
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+    
+    .booking-item__image {
+        height: 180px;
+        border-radius: 6px;
+    }
+    
+    .booking-item__badge {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .booking-item__details {
+        gap: 16px;
+    }
+    
+    .booking-item__name {
+        font-size: 19px;
+    }
+    
+    .booking-item__info {
+        gap: 9px;
+    }
+    
+    .booking-item__info-row {
+        font-size: 12px;
+        gap: 8px;
+    }
+    
+    .booking-item__icon {
+        font-size: 13px;
+    }
+    
+    .booking-item__pricing {
+        gap: 8px;
+        padding-top: 14px;
+    }
+    
+    .booking-item__price-label {
+        font-size: 12px;
+    }
+    
+    .booking-item__price-total {
+        font-size: 20px;
+    }
+    
+    .booking-notes {
+        padding: 18px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border-left-width: 3px;
+    }
+    
+    .booking-notes__title {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+    
+    .booking-notes__text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .order-success__sidebar {
+        gap: 20px;
+    }
+    
+    .price-card__title,
+    .info-card__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .price-card__rows {
+        gap: 10px;
+    }
+    
+    .price-card__row {
+        padding: 9px 0;
+    }
+    
+    .price-card__label {
+        font-size: 13px;
+    }
+    
+    .price-card__value {
+        font-size: 14px;
+    }
+    
+    .price-card__divider {
+        margin: 12px 0;
+    }
+    
+    .price-card__row--total {
+        padding-top: 16px;
+    }
+    
+    .price-card__row--total .price-card__label {
+        font-size: 15px;
+    }
+    
+    .price-card__row--total .price-card__value {
+        font-size: 26px;
+    }
+    
+    .price-card__status {
+        padding: 16px;
+        gap: 10px;
+        margin-top: 25px;
+        border-radius: 6px;
+    }
+    
+    .price-card__status-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+    
+    .price-card__status-title {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .price-card__status-text {
+        font-size: 11px;
+    }
+    
+    .info-card__content {
+        margin-bottom: 20px;
+    }
+    
+    .info-card__text {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    .info-card__link {
+        font-size: 13px;
+        gap: 8px;
+    }
+    
+    .order-success__actions {
+        gap: 12px;
+    }
+    
+    .order-success__loading {
+        padding: 80px 15px;
+    }
+    
+    .order-success__spinner {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+        margin-bottom: 25px;
+    }
+    
+    .order-success__error {
+        padding: 80px 15px;
+    }
+    
+    .order-success__error-icon {
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+    
+    .order-success__error h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+        padding: 0 10px;
+    }
+    
+    .order-success__error p {
+        font-size: 14px;
+        margin-bottom: 35px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .order-success {
+        padding: 40px 0 50px;
+    }
+    
+    .order-success__title {
+        font-size: 28px;
+    }
+    
+    .order-success__subtitle {
+        font-size: 14px;
+    }
+    
+    .order-success__order-number {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+    
+    .booking-summary,
+    .price-card,
+    .info-card {
+        padding: 20px 15px;
+    }
+    
+    .booking-summary__title {
+        font-size: 22px;
+    }
+    
+    .booking-item {
+        padding: 18px 14px;
+    }
+    
+    .booking-item__image {
+        height: 160px;
+    }
+    
+    .booking-item__name {
+        font-size: 18px;
+    }
+    
+    .booking-item__info-row {
+        font-size: 11px;
+    }
+    
+    .booking-item__price-total {
+        font-size: 19px;
+    }
+    
+    .price-card__title,
+    .info-card__title {
+        font-size: 19px;
+    }
+    
+    .price-card__row--total .price-card__value {
+        font-size: 24px;
+    }
+}

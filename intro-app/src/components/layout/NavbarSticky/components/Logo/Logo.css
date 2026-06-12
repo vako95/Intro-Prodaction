@@ -1,0 +1,31 @@
+.navbar-sticky__logo {
+    width: 150px;
+    height: auto;
+    margin-right: 40px;
+}
+
+/* Mobile & Tablet: Smaller logo */
+@media (max-width: 63.9375em) { /* Up to 1023px */
+    .navbar-sticky__logo {
+        width: 100px; /* Smaller logo */
+        margin-right: 16px; /* Less margin */
+    }
+}
+
+/* Mobile only: Even smaller */
+@media (max-width: 47.9375em) { /* Up to 767px */
+    .navbar-sticky__logo {
+        width: 80px; /* Even smaller on mobile */
+        margin-right: 12px;
+    }
+}
+
+.navbar-sticky__logo-link {
+    display: flex;
+}
+
+.navbar-sticky__logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

@@ -1,0 +1,67 @@
+.overlay__section--left {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 58%;
+    min-width: 300px;
+}
+
+.overlay__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.overlay__heading {
+     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .overlay__section--left {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+ 
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .overlay__section--left {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .overlay__section--left {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .overlay__section--left {
+        flex: 0 0 70%;
+    }
+
+ 
+}

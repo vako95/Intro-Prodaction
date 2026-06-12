@@ -1,0 +1,458 @@
+/* ============================================
+   NAVBAR STICKY - COMPACT VERSION OF NAVBAR
+   ============================================ */
+
+.navbar-sticky__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10000;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.navbar-sticky {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(170, 132, 83, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.navbar-sticky__nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0px;
+}
+
+.navbar-sticky__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-sticky__menu-desktop {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   LANGUAGE SWITCHER - DESKTOP
+   ============================================ */
+
+.navbar-sticky__lang-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-sticky__lang-current {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-sticky__lang-current:hover {
+    border-color: rgba(170, 132, 83, 0.6);
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.25) 0%, rgba(170, 132, 83, 0.15) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(170, 132, 83, 0.3);
+}
+
+.navbar-sticky__lang-current .fi {
+    font-size: 14px;
+}
+
+.navbar-sticky__lang-code {
+    font-family: "Barlow", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-sticky__lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(20, 18, 18, 0.98) 0%, rgba(34, 34, 34, 0.98) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(170, 132, 83, 0.15);
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-sticky__lang-switcher:hover .navbar-sticky__lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar-sticky__lang-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Barlow", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-sticky__lang-item .fi {
+    font-size: 12px;
+}
+
+.navbar-sticky__lang-item:hover {
+    background: linear-gradient(90deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+    transform: translateX(4px);
+}
+
+.navbar-sticky__lang-item--active {
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    color: #fff;
+}
+
+.navbar-sticky__lang-item--active:hover {
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+}
+
+/* ============================================
+   PROFILE - DESKTOP
+   ============================================ */
+
+.navbar-sticky__profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-sticky__profile-current {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px 3px 3px;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 32px;
+}
+
+.navbar-sticky__profile-current:hover {
+    border-color: rgba(170, 132, 83, 0.6);
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.25) 0%, rgba(170, 132, 83, 0.15) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(170, 132, 83, 0.3);
+}
+
+.navbar-sticky__profile-avatar {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    border: 2px solid rgba(170, 132, 83, 0.5);
+    flex-shrink: 0;
+}
+
+.navbar-sticky__profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-sticky__profile-avatar-icon {
+    font-size: 14px;
+    color: #fff;
+}
+
+.navbar-sticky__profile-name {
+    font-family: "Barlow", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navbar-sticky__profile-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(20, 18, 18, 0.98) 0%, rgba(34, 34, 34, 0.98) 100%);
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(170, 132, 83, 0.15);
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-sticky__profile:hover .navbar-sticky__profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar-sticky__profile-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Barlow", sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    width: 100%;
+}
+
+.navbar-sticky__profile-item:hover {
+    background: linear-gradient(90deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+    transform: translateX(4px);
+}
+
+.navbar-sticky__profile-item--logout {
+    border-top: 1px solid rgba(170, 132, 83, 0.2);
+    margin-top: 4px;
+    padding-top: 10px;
+}
+
+.navbar-sticky__profile-item--logout:hover {
+    background: linear-gradient(90deg, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 100%);
+    color: rgba(255, 100, 100, 1);
+}
+
+.navbar-sticky__profile-item-icon {
+    font-size: 16px;
+    color: rgba(170, 132, 83, 1);
+}
+
+.navbar-sticky__profile-item--logout .navbar-sticky__profile-item-icon {
+    color: rgba(220, 53, 69, 1);
+}
+
+/* ============================================
+   AUTH BUTTONS - DESKTOP
+   ============================================ */
+
+.navbar-sticky__auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-sticky__auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(170, 132, 83, 0.3);
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-sticky__auth-btn-icon {
+    font-size: 16px;
+}
+
+.navbar-sticky__auth-btn--login {
+    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.15) 0%, rgba(170, 132, 83, 0.05) 100%);
+}
+
+.navbar-sticky__auth-btn--login:hover {
+    border-color: rgba(170, 132, 83, 0.6);
+    background: linear-gradient(135deg, rgba(170, 132, 83, 0.25) 0%, rgba(170, 132, 83, 0.15) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(170, 132, 83, 0.3);
+}
+
+.navbar-sticky__auth-btn--register {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(170, 132, 83, 1) 0%, rgba(190, 152, 103, 1) 100%);
+    border-color: rgba(170, 132, 83, 1);
+}
+
+.navbar-sticky__auth-btn--register:hover {
+    background: linear-gradient(135deg, rgba(190, 152, 103, 1) 0%, rgba(170, 132, 83, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(170, 132, 83, 0.4);
+}
+
+/* ============================================
+   BURGER MENU STYLES
+   ============================================ */
+
+.navbar-sticky__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    margin-left: auto;
+}
+
+.navbar-sticky__burger-line {
+    width: 100%;
+    height: 2.5px;
+    background-color: rgba(170, 132, 83, 1);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.navbar-sticky__burger--active .navbar-sticky__burger-line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.navbar-sticky__burger--active .navbar-sticky__burger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.navbar-sticky__burger--active .navbar-sticky__burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.navbar-sticky__container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.navbar-sticky__container-bgColor--black {
+    background-color: black;
+    border-bottom: none;
+    padding: 0px 24px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    .navbar-sticky__burger {
+        display: flex;
+    }
+
+    .navbar-sticky__menu-desktop {
+        display: none;
+    }
+
+    .navbar-sticky__lang-switcher,
+    .navbar-sticky__profile,
+    .navbar-sticky__auth-buttons {
+        display: none;
+    }
+
+    .navbar-sticky__nav {
+        padding: 14px 0;
+    }
+
+    .navbar-sticky__actions {
+        gap: 12px;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    .navbar-sticky__burger {
+        width: 26px;
+        height: 22px;
+    }
+
+    .navbar-sticky__burger-line {
+        height: 2px;
+    }
+
+    .navbar-sticky__nav {
+        padding: 12px 0;
+    }
+
+    .navbar-sticky__actions {
+        gap: 10px;
+    }
+}
+
+/* Small mobile devices (320px) */
+@media (max-width: 320px) {
+    .navbar-sticky__burger {
+        width: 24px;
+        height: 20px;
+    }
+
+    .navbar-sticky__nav {
+        padding: 10px 0;
+    }
+}

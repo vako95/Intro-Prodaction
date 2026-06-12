@@ -1,0 +1,205 @@
+.swap__content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    background-color: rgb(29, 29, 29);
+    margin-right: 16px;
+}
+
+.swap__content-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.swap__content::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: inherit;
+}
+
+.swap__content-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: inherit;
+    overflow: hidden;
+    padding: 75px 0px 50px 50px;
+
+}
+
+.swap__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.swap__holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+.swap__content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    background-color: rgb(29, 29, 29);
+    margin-right: 16px;
+}
+
+.swap__content-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.swap__content::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    width: 80px;
+    height: 100%;
+    background-color: inherit;
+}
+
+.swap__content-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: inherit;
+    overflow: hidden;
+    padding: 75px 0px 50px 50px;
+
+}
+
+.swap__heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.swap__holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile First Approach
+   ============================================ */
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .swap__content {
+        margin-right: 0;
+    }
+
+    .swap__content::before {
+        width: 40px;
+    }
+
+    .swap__content-box {
+        padding: 40px 20px 30px 20px;
+    }
+
+    .swap__heading {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .swap__content {
+        margin-right: 8px;
+    }
+
+    .swap__content::before {
+        width: 50px;
+    }
+
+    .swap__content-box {
+        padding: 50px 24px 35px 24px;
+    }
+
+    .swap__heading {
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .swap__content {
+        margin-right: 12px;
+    }
+
+    .swap__content::before {
+        width: 60px;
+    }
+
+    .swap__content-box {
+        padding: 60px 32px 40px 32px;
+    }
+
+    .swap__heading {
+        margin-bottom: 28px;
+    }
+}
+
+/* Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .swap__content {
+        margin-right: 14px;
+    }
+
+    .swap__content::before {
+        width: 70px;
+    }
+
+    .swap__content-box {
+        padding: 65px 40px 45px 40px;
+    }
+
+    .swap__heading {
+        margin-bottom: 30px;
+    }
+}
