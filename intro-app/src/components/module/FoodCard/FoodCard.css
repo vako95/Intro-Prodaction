@@ -72,7 +72,6 @@
     }
 }
 
-/* Mobile devices (480px) */
 @media (max-width: 480px) {
     .food-card {
         padding: 40px 0;
