@@ -76,7 +76,6 @@
     }
 }
 
-/* Small mobile devices (320px) */
 @media (max-width: 320px) {
     .gallery__card-wrapper {
         max-height: 200px;
