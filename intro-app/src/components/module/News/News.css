@@ -21,11 +21,6 @@
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-/* Tablets and below (768px) */
 @media (max-width: 768px) {
     .news {
         padding: 60px 0;

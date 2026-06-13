@@ -113,11 +113,6 @@
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-/* Tablets and below (768px) */
 @media (max-width: 768px) {
     .login {
         padding: 32px 24px;
@@ -188,7 +183,6 @@
     }
 }
 
-/* Small mobile devices (320px) */
 @media (max-width: 320px) {
     .login {
         padding: 16px 12px;
