@@ -40,12 +40,6 @@
     height: 80px;
 }
 
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-/* Tablets and below (768px) */
 @media (max-width: 768px) {
     .food-card {
         padding: 48px 0;
