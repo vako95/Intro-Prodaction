@@ -39,7 +39,6 @@
     }
 }
 
-/* Small mobile devices (320px) */
 @media (max-width: 320px) {
     .faq {
         gap: 12px;
