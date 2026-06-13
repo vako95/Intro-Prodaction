@@ -60,7 +60,6 @@
     }
 }
 
-/* Mobile devices (480px) */
 @media (max-width: 480px) {
     .gallery {
         padding: 20px 0;
