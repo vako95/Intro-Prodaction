@@ -33,7 +33,6 @@
     }
 }
 
-/* Mobile devices (480px) */
 @media (max-width: 480px) {
     .news {
         padding: 48px 0;
