@@ -45,11 +45,6 @@
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-/* Tablets and below (768px) */
 @media (max-width: 768px) {
     .gallery {
         padding: 24px 0;
